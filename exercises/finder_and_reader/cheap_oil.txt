@@ -1,0 +1,1726 @@
+Policy Research Working Paper                  9320
+
+
+
+
+                  Adding Fuel to the Fire
+          Cheap Oil during the COVID-19 Pandemic
+
+                       Collette Mari Wheeler
+                             John Baffes
+                          Alain Kabundi
+                       Gene Kindberg-Hanlon
+                           Peter S. Nagle
+                       Franziska L. Ohnsorge
+
+
+
+
+Prospects Group
+July 2020
+Policy Research Working Paper 9320
+
+
+  Abstract
+ The outbreak of COVID-19 and the wide-ranging mea-                                 which energy exporters and importers suffered similar ini-
+ sures needed to slow its advance triggered an unprecedented                        tial output losses (about 0.5 percent) that were unwound
+ collapse in oil demand, a surge in oil inventories, and a                          within three years. Third, the current episode of low oil
+ record one-month decline in oil prices in March 2020. This                         prices holds limited promise to boost the global economy
+ paper examines the likely implications of the 2020 oil price                       amid widespread restrictions and narrow room for fiscal
+ plunge for emerging market and developing economies. It                            support in energy-exporting emerging market and devel-
+ presents four main results. First, the record plunge in oil                        oping economies. Fourth, many emerging market and
+ prices was predominantly driven by demand factors as                               developing economies entered the current public health
+ wide-ranging measures to stem the pandemic precipitated                            crisis with precarious fiscal positions; current low oil prices
+ an unprecedented collapse in oil demand, but the surge                             are thus an opportunity to review energy-pricing policies,
+ in oil inventories also exerted downward pressure on oil                           including remaining energy subsidies, to mobilize domestic
+ prices. Second, this latest oil price decline was preceded                         resources.
+ by six previous plunges over the past half-century, during
+
+
+
+
+ This paper is a product of the Prospects Group. It is part of a larger effort by the World Bank to provide open access to its
+ research and make a contribution to development policy discussions around the world. Policy Research Working Papers
+ are also posted on the Web at http://www.worldbank.org/prwp. The authors may be contacted at jbaffes@worldbank.org;
+ akabundi@worldbank.org; gkindberghanlon@worldbank.org; pnagle@worldbank.org; fohnsorge@worldbank.org; and
+ cwheeler@worldbank.org.
+
+
+
+
+         The Policy Research Working Paper Series disseminates the findings of work in progress to encourage the exchange of ideas about development
+         issues. An objective of the series is to get the findings out quickly, even if the presentations are less than fully polished. The papers carry the
+         names of the authors and should be cited accordingly. The findings, interpretations, and conclusions expressed in this paper are entirely those
+         of the authors. They do not necessarily represent the views of the International Bank for Reconstruction and Development/World Bank and
+         its affiliated organizations, or those of the Executive Directors of the World Bank or the governments they represent.
+
+
+                                                       Produced by the Research Support Team
+                                       Adding Fuel to the Fire:
+                        Cheap Oil during the COVID-19 Pandemic
+                Collette Mari Wheeler, John Baffes, Alain Kabundi, Gene Kindberg-Hanlon,
+
+                                  Peter S. Nagle and Franziska L. Ohnsorge ∗
+
+
+
+
+Key Words: Commodity prices, 2020 oil price decline, COVID-19 pandemic, 2014 oil price decline,
+macroeconomic implications, supply factors, demand factors, unconventional oil production, global output.
+JEL Codes: Q40, Q41, Q43, F40, E32, E62.
+
+
+∗
+ John Baffes (World Bank; jbaffes@worldbank.org); Alain Kabundi (World Bank; akabundi@worldbank.org); Gene
+Kindberg-Hanlon       (World     Bank;    gkindberghanlon@worldbank.org);           Peter     Nagle (World      Bank;
+pnagle@worldbank.org); Franziska Ohnsorge (World Bank, CEPR; fohnsorge@worldbank.org); and Collette Mari
+Wheeler (World Bank; cwheeler@worldbank.org). We would like to thank M. Ayhan Kose, Carlos Arteta, Alistair
+Dieppe, Christiane Baumeister, Kevin Clinton, Chris Towe, and Joaquin Vespignani, as well as participants and
+seminars and institutions around the world for many useful suggestions and comments. We thank Kaltrina Temaj for
+excellent research assistance. The findings, interpretations, and conclusions expressed in this paper are those of the
+authors. They do not necessarily represent the views of the institutions they are affiliated with.
+    1. Introduction
+
+Since March 2020, oil markets have been buffeted by an exceptional confluence of demand and
+supply shocks that have culminated in an unprecedented collapse in oil prices. The COVID-19
+pandemic and the measures deployed to contain its spread—quarantines, travel restrictions,
+shutdowns of non-essential activities—have caused severe economic dislocations. Governments
+have responded with programs to mitigate personal hardship and disruptions to economic life, and
+central banks have cut policy rates and injected liquidity on an extraordinary scale. Many countries
+have nevertheless suffered deep economic contractions, with especially sharp reductions in travel
+and transportation—both heavily oil-intensive activities.
+
+The collapse in energy demand came on the heels of delays of OPEC and the Russian Federation
+in extending a production agreement in early March. This was followed by outright production
+increases in some OPEC countries (World Bank 2020a). A new agreement between OPEC and
+non-OPEC producers to curb production was reached in early April; however, prices fell further
+after the announcement. Coupled with the collapse in global energy demand, global oil inventories
+have risen steeply and remaining storage capacity is limited (IEA 2020).
+
+Oil prices have plummeted, recording their largest one-month fall on record in March 2020. By
+one measure, the European Brent spot price, the oil price fell by 85 percent between January 22,
+when the first human-to-human transmission of COVID-19 was announced, and its trough on April
+21—more than at the height of the global financial crisis (70 percent from end-August to late-
+December 2008) and more than the plunge during the whole period of end-June 2014 to mid-
+January 2016 (77 percent). 1 The West Texas Intermediate oil price fell into negative territory on
+April 20. 2 Since then, Brent oil prices have regained some ground but, at around $30 per barrel on
+average in the first three weeks of May, remain less than half their January average and around the
+January 2016 trough of the oil price slide of 2014-16.
+
+In the context of the current widespread and severe restrictions on economic activity to stem the
+spread of the pandemic, low oil prices are unlikely to provide much of a buffer for the global
+economy. Indeed, there are signs that low oil prices may even be compounding the damage being
+
+
+1
+  Another frequently used measure, the Dated Brent spot price, fell by 72 percent over this period, on par with the
+declines during these comparator periods for the global financial crisis and the 2014-16 price slide.
+2
+  This reflected an expiring futures contract and no physical oil traded at negative prices.
+
+                                                        2
+done by the pandemic by weakening the balance sheets of producers. However, high levels of
+inventories suggest that oil prices may remain low for some time, which may provide some initial
+support for the broader economic recovery once it gets underway.
+
+Against this background, this paper examines the likely implications of the 2020 oil price plunge
+by putting it in a historical context and drawing lessons from the experience of emerging market
+and developing economy (EMDE) energy exporters and importers during the 2014-16 plunge
+(refer to Appendix 1 for country classification). Specifically, the paper addresses the following
+questions: First, what has been the source of the 2020 oil price collapse? Second, how does it
+compare with earlier episodes? Third, how will low oil prices likely affect the eventual recovery
+of EMDE energy exporters and importers?
+
+To shed light on these questions, this paper uses three-pronged approach: an assessment of the
+drivers of the recent oil price decline using a structural vector autoregression model; an
+examination of previous oil market disruptions since 1970; and an estimation of the impact of
+previous oil price plunges on output using a local projections model. The paper reports four main
+findings.
+
+Predominantly demand-driven oil price decline. The collapse in oil prices in March was the
+steepest one-month drop on record. A precipitous decline in oil consumption in the context of still-
+robust production has led to a rapid buildup in oil inventories, with remaining storage capacity
+close to capacity in June 2020. The oil price plunge mainly reflected a collapse in demand arising
+from the pandemic and the restrictions that were needed to stem its spread. Besides triggering a
+global recession, these restrictions severely disrupted travel and transport, which account for
+around two-thirds of oil demand. Oil demand is expected to decline by about 8 percent in 2020—
+an unprecedented plunge. Supply-side factors, in particular the initial delay in agreeing to limit
+production, added to downward pressures on oil prices.
+
+Output losses in EMDEs. This latest oil price plunge was preceded by six previous plunges over
+the past half-century. During past demand-driven episodes, energy exporters and importers
+suffered similar initial output losses (about 0.5 percent) that were unwound within three years. In
+supply-driven oil price plunges, however, energy importers did not witness robust growth pickups
+but energy exporters witnessed similar initial output losses as in demand-driven plunges and less
+than one-third of these losses had been unwound three years later. This lasting impact of supply-
+
+                                                 3
+driven oil price plunges may reflect a reassessment of long-term prospects for energy exporters.
+Energy-exporting EMDEs with lower debt, more flexible exchange rates, and more diversified
+export bases suffered smaller short-term output losses.
+
+Limited promise to boost global economy. As long as widespread restrictions continue to constrain
+economic activity across the global economy, low oil prices are unlikely to provide meaningful
+support to global growth. If anything, the current episode of low oil prices holds less promise for
+a sustained boost to global growth than past episodes of low oil prices since energy exporters
+entered the current episode with eroded fiscal positions and foreign exchange buffers to support
+their economies, after having drawn on them to weather the previous oil price plunge of 2014-16.
+That said, when current pandemic-related restrictions ease, excess inventories and low oil prices
+could provide some initial support for the revival of global economic activity.
+
+Need for policy action. Current low oil prices are an opportunity to review energy-pricing policies,
+including remaining energy subsidies. A carefully calibrated design, phasing, and communication
+of such reforms is critical for their success. For energy exporters, this most recent oil price decline
+is yet another reminder of the urgency to continue with reforms to diversify their economies. These
+include measures to strengthen competition, broaden fiscal revenue bases, and enhance fiscal and
+monetary policy frameworks.
+
+This paper adds several novel contributions to the literature. First, it is the first comprehensive
+analysis of the potential impact of the 2020 oil price plunge on EMDEs and the global economy.
+Second, it places the current decline into historical context to allow an assessment of the severity
+of the plunge. Third, it draws policy lessons from previous episodes of sharp declines in oil prices
+to examine the implications of the current plunge for EMDEs.
+
+The rest of the paper is organized as follows. First, it assesses the drivers of the recent oil price
+decline using a structural vector autoregression model to decompose recent price developments
+into demand and supply factors. Next, it compares the current episode with previous oil market
+disruptions over the past half-century. This is followed by an estimation of the impact of previous
+oil price plunges on output using a local projections model since 1970. The paper then proceeds to
+discuss energy policy reforms following the 2014-16 oil price plunge, including a review of
+diversification efforts and energy-pricing measures. The paper concludes with a summary of
+findings.
+
+                                                  4
+    2. Drivers of the recent oil price plunge
+
+This section reviews recent oil market developments and uses a structural vector autoregression
+model to decompose the price decline into demand and supply factors.
+
+2.1 Oil market developments during the onset of the COVID-19 pandemic
+
+By one measure, the European Brent spot price, crude oil prices fell by 85 percent between January
+22, 2020 (the date the first recorded human-to-human COVID-19 infection was announced) and
+their trough of $9 per barrel on April 21, 2020 before recovering in May to less than half their
+January average (Figure 1). 3 The oil market has been hit by an unprecedented combination of
+demand and supply shocks. The pandemic, and the restrictions on business and personal activities
+imposed to stem its spread, have triggered a global recession, and a steep drop in the demand for
+oil (World Bank 2020b). Total oil demand fell by 5 percent in the first quarter of 2020 and is
+projected to decline 18 percent in the second quarter of 2020 (IEA 2020). This coincided with a
+delay in early March of OPEC and its partners (OPEC+) to agree to an extension of their
+production cuts (World Bank 2020a). Meanwhile, petroleum inventories have risen rapidly and
+are now close to capacity (IEA 2020).
+
+2.2 Methodology and data
+
+A structural vector autoregression (SVAR), as in Kilian and Murphy (2014), is used to decompose
+the oil price decline in 2020 into demand- and supply-driven factors. The SVAR includes the
+logarithms of global oil production, global oil prices, global industrial production, and OECD
+inventories. Three shocks are identified using a combination of sign restrictions on impact
+responses and on the impact price elasticity of oil demand.
+
+Sign restrictions. The decomposition identifies a positive supply shock—such as would have been
+caused by the failure of the OPEC agreement in early March—as an event that lowers prices and
+at the same time raises both global oil output and industrial production. In contrast, a negative
+demand shock—such as would have been caused by travel restrictions or falling global growth—
+
+
+3
+ Another frequently used measure, the Dated Brent spot price, fell by 72 percent over this period, on par with the 70
+percent decline during the global financial crisis (end-August to late December 2008) and the 76 percent decline during
+end-June 2014-mid-January 2016. In late-April, the West Texas Intermediate oil price (a U.S. oil price benchmark)
+contract for delivery in May temporarily fell below zero on concerns about near-full U.S. storage capacity; however,
+no physical oil was traded at negative prices.
+
+                                                          5
+is an event that lowers oil prices amid falling oil output and industrial production. A positive
+speculative demand shock (such as the residual in Figure 2.F) is identified as one that raises oil
+inventories, increases prices and oil production, and reduces industrial production.
+
+Elasticity restrictions. Restrictions are imposed on the short-run price elasticity of oil demand.
+The impact price elasticity of demand is assumed to be non-positive; the median draw in the range
+-0.2 to -0.1 is used, in line with estimates of the elasticity since the 1980s in Baumeister and
+Peersman (2013).
+
+Data. The exercise set uses monthly data from January 1980 to April 2020. Global industrial
+production is the production-weighted average of industrial production in 31 advanced economies
+and 47 EMDEs, in an unbalanced sample depending on data availability. Data for industrial
+production in April is estimated as the level predicted by the global manufacturing purchasing
+managers’ index. Global oil production is from the International Energy Agency (IEA) from 1987-
+2020 and the U.S. Energy Information Administration (EIA) from 1980-86. Oil prices are the
+unweighted average of Brent, West Texas Intermediate, and Dubai crude oil prices from the World
+Bank’s Pink Sheet, measured in U.S. dollars. OECD inventories use IEA data from 1991-2020 and
+EIA data from 1987-1990. In April 2020 and prior to 1987, percent changes in U.S. inventories,
+which account for about one-third of OECD inventories, are used to proxy for changes in OECD
+inventories.
+
+2.3 Results
+
+The oil price plunge in 2020 has been mostly demand-driven, although supply factors have also
+played a role. The SVAR decomposition suggests that two-thirds of the price decline in the six
+months ending in April 2020 has been due to falling demand. 4 The demand and supply factors
+surrounding the recent plunge in oil prices are discussed below.
+
+Demand decline resulting from lockdowns. The single largest factor driving the collapse in oil
+prices has been the sharp reduction in oil demand arising from government restrictions to stem the
+
+
+4
+  In contrast, other research finds that only around one-third of the fall in oil prices can be attributed to demand
+conditions, while supply factors explain most of the remainder of the fall (Groen and Nattinger 2020). Instead of
+industrial production as a proxy for oil demand, these other models use asset prices which have considerably more
+resilience than real activity indicators (in part reflecting monetary policy measures). If anything, other factors, in
+particular the widespread anticipation of a delay in OPEC+ negotiations, point to an even greater role of demand than
+estimated here.
+
+                                                          6
+spread of the pandemic. Many countries have implemented wide-ranging travel bans, sharply
+reducing the number of flights. Stay-at-home orders and a widespread shift to remote working
+have caused the number of passenger journeys to plummet. For example, passenger journeys in
+China fell by three-fifths compared to their normal level in March, while subway journeys in New
+York fell by more than nine-tenths in April (Figure 2). There has also been a reduction in the
+volume of shipping, both for consumers (most notably cruises) and container shipping for industry,
+as a result of shrinking global trade. The unprecedented reduction in transport in many countries—
+which accounts for around two-thirds of demand for oil—has led to a sharp fall in fuel
+consumption.
+
+Demand decline resulting from the economic downturn. The global recession currently
+unfolding, which is on track to be the steepest in the past eight decades, also reduces global
+consumption of oil. 5 Declines in economic growth can lead to sharp falls in oil prices, because of
+the high income elasticity of demand for oil. Over the past two decades, a 1 percentage-point
+decline in income growth in the United States or China has typically been associated with a 13 and
+10 percent fall, respectively, in global oil prices after one year.
+
+Supply fluctuations. Oil markets have also been buffeted by production decisions by OPEC and
+its partners. Following several years of rapid growth in U.S. shale oil production and amid falling
+global oil demand, the production agreement among OPEC+ partners failed to be renewed in early
+March. 6 This exacerbated the initial decline in prices and triggered a further 24 percent fall in
+prices the day after the announcement. In early April, OPEC and its partners announced a new
+agreement to cut production by a historically large 9.7 percent in May and June that would be
+unwound gradually. However, the size of the cuts was apparently insufficient to reassure markets
+that they would offset the decline in consumption, and oil prices fell further following the
+announcement.
+
+
+
+
+5
+  See Baffes, Kabundi, and Nagle (2020); Csereklyei, del Mar Rubio Varas, and Stern (2016); Gately and Huntington
+(2002); and World Bank (2018a).
+6
+  OPEC+ includes all OPEC countries, together with Azerbaijan, Bahrain, Brunei, Kazakhstan, Malaysia, Mexico,
+Oman, Russia, Sudan, and South Sudan.
+
+                                                       7
+   3. Comparison with previous periods of oil market disruptions
+
+The preceding section estimated the contribution of supply and demand factors to the recent oil
+price decline. This section compares the current episode with previous oil market turmoil,
+including past global recessions and travel disruptions. The current episode of widespread
+economic weakness and travel disruptions has been associated with a considerably steeper oil price
+collapse than similar episodes in the past (Figure 3). For 2020 as a whole, oil demand is expected
+to drop by an unprecedented 8 percent— around twice as much as during any previous global
+recession or oil-specific demand slowdown (IEA 2020).
+
+3.1 Global recessions
+
+Prior to this year’s event, there have been four global recessions over the past 70 years: 1975,
+1982, 1991, and 2009 (Kose and Ohnsorge 2019; Kose, Sugawara, and Terrones 2020). In each of
+these episodes, there was a contraction in real per capita global output and broad-based weakness
+in multiple indicators of global economic activity.
+
+During these recessions, oil prices (and other industrial commodity prices) fell. The sharpest
+declines occurred during the global financial crisis, when oil prices fell by nearly 60 percent over
+three months. In most of these recessions, oil prices remained below pre-recession levels for
+several years.
+
+Oil consumption also typically fell during global recessions. The largest decline in oil consumption
+occurred in 1980-82, when consumption fell by a cumulative 9 percent from its peak in 1979. The
+supply-driven spike in oil prices in 1980, around the revolution in the Islamic Republic of Iran,
+contributed to the global recession in 1981-82, which further depressed oil consumption. In
+contrast, the two most recent recessions saw much smaller declines in oil demand. For the 2008-
+09 recession, this reflected the strong shift in global oil consumption towards China, which
+continued to grow robustly through the global financial crisis (Stocker et al. 2018).
+
+3.2 Travel disruptions
+
+Measures implemented in 2020 to limit the spread of the pandemic bear some similarities to the
+widespread travel disruptions in the aftermath of the terrorist attacks on the United States on
+September 11, 2001. U.S. airline passenger traffic fell by 30 percent in the immediate aftermath
+
+
+                                                 8
+of the attacks and remained as much as 7 percent lower after two years (Ito and Lee 2005). The
+attacks also resulted in a sharp spike in uncertainty and prolonged the recession following the dot-
+com collapse in the United States, and hence the slowdown in global activity.
+
+In the aftermath of the 9/11 attacks, oil prices fell sharply (by one-third over the following two
+months), while other commodity prices were largely unaffected. Travel disruption
+disproportionately affected oil consumption but heightened uncertainty and slowing growth also
+weighed on oil demand. However, the oil price decline was short-lived: within six months, oil
+prices had returned above their pre-attack levels. Oil consumption growth averaged close to zero
+in the three quarters following the attacks, down from an average of 1.5 percent (y/y) in the
+previous four quarters.
+
+
+
+    4. Implications of oil price plunges for the global economy
+
+All else being equal, low oil prices might be expected to help boost global growth, including by
+stimulating energy-intensive activities such as travel and transportation. Moreover, by dampening
+inflation, lower prices would also give central banks more room to ease monetary policy (Baffes
+et al. 2015; Ratti and Vespigniani 2016). 7 However, these effects would vary across countries:
+Energy exporters in particular would suffer real income losses, which would dampen consumption
+and investment.
+
+In practice, however, all of the oil price plunges since 1970 have been accompanied by global
+recessions, global slowdowns and, in some cases, widespread financial crises. 8 Three reasons may
+account for this. First, the source—many of the past oil price plunges were themselves responses
+to economic downturns rather than independent shocks that might have triggered upturns (Cashin,
+Mohaddes, and Raissi 2014; Kilian 2009; Peersman and Van Robays 2012). Second, the timing—
+during oil price plunges, the output losses in energy exporters materialized more quickly than
+output gains in energy importers, resulting in short-term global growth slowdowns (de Michelis,
+Ferreira, and Iacovelli, forthcoming). Third, asymmetries—uncertainty, frictions, and asymmetric
+
+
+7
+  Depending on the source of the fall in oil prices, it may also depress equity markets (Kang, Ratti, and Vespigniani
+2016).
+8
+  The long-term benefits that may have ensued go beyond the scope of this section.
+
+
+                                                         9
+monetary policy responses can create asymmetries that increase the damage to energy exporters
+compared with the benefits to energy importers. 9
+
+4.1 Features of past oil price plunges
+
+Since 1970, the global economy has witnessed seven oil price plunges when oil prices fell by 30
+percent or more over a six-month period: 1985-86, 1990-91, 1998, 2001, 2008-09, 2014-16, and
+2020. The previous oil price plunges in 1990-91, 1998, 2001, and 2008-09 were one-half to entirely
+(2008-09) demand-driven, whereas the oil price plunges of 1985-86 and 2014-16 were four-fifths
+and two-thirds supply-driven, respectively (Figure 2). 10 The duration of previous oil price plunge
+episodes varies—those associated with global slowdowns were short-lived (1998, 2001), with oil
+prices regaining their pre-plunge levels in less than four years. In contrast, oil price plunges around
+global recessions (1990-91, 2008-09) and largely supply-driven plunges (1985-86, 2014-16) were
+followed by more prolonged periods of low prices (Figure 4). Similarly, oil price plunges
+associated with global slowdowns (1998, 2001) were shallower than those around global
+recessions (2008-09, 1990-91) or those associated with largely supply-driven plunges (1985-86,
+2014-16). The oil price plunge of 2014-16 was particularly protracted.
+
+1985-86. The 1985-86 oil price slump arose from a supply shock as OPEC reverted to its
+production target of 30 mb/d in response to rising oil supply from the North Sea and Mexico and
+breaches of OPEC production agreements (Gately, Adelman, and Griffin 1986). The oil price
+plunge ushered in a period of weak growth and significant debt problems in some large EMDEs
+as well as slow growth in European countries, and, at the end of 1987, a significant downward
+correction in U.S. and global stock markets
+
+1990-91. While the oil price decline of 1990-91 satisfy the definition employed here, it differed
+from other oil price plunges in being a reversal of a previous oil price spike triggered by the first
+Gulf War. Despite monetary policy loosening, global growth slowed in 1991 before recovering
+modestly in 1992-93, as a recession in Europe ran its course, the recovery in the United States
+
+
+
+9
+ See Hamilton (2011); Hoffman (2012); Jimenez-Rodriguez and Sanchez (2005); and Jo (2014).
+10
+  The 1990-91 plunge was almost equally demand- and supply-driven. It reflected a global recession as well as an
+unwinding of supply concerns triggered by Iraq’s invasion of Kuwait. This episode differs from others in that it
+unwound a short-lived price spike at the beginning of the first Gulf War whereas other episodes followed extended
+periods of price increases or price stability.
+
+                                                       10
+remained hesitant amid financial strains in the savings and loans sector, and Japan entered a period
+of prolonged stagnation.
+
+1998. The 1997 Asian financial crisis, set against a backdrop of a continued expansion of OPEC
+production until mid-1998, was accompanied by weakening oil demand and a sharp decline in oil
+prices (Fattouh 2007). Despite low oil prices, the global recovery remained tepid for most of 1998,
+partly as a result of the failure of a large asset management fund in the United States and financial
+stress in major emerging markets.
+
+2001. The disruptions and uncertainty caused by the September 11 terrorist attacks in the United
+States intensified a growth slowdown already underway as the “dotcom” bubble deflated.
+Softening global activity and rising uncertainty triggered a sharp decline in oil prices. However,
+aggressive monetary policy easing by the Federal Reserve and other major central banks supported
+a rapid rebound in activity.
+
+2008-09. A severe recession following the global financial crisis sent all commodity prices
+tumbling. The recovery from the global recession was sluggish as many countries faced a wide
+variety of legacy challenges and global potential growth slowed (Kilic, Kose, and Ohnsorge 2020;
+Kose and Ohnsorge 2019). However, starting in 2009, strong demand for oil and other
+commodities from China propelled a rebound in their prices.
+
+2014-16. Between mid-2014 and early 2015, oil prices fell by more than 50 percent and then
+continued to fall until their trough in early 2016. The decline was triggered by a combination of
+surging U.S. shale oil production, receding geopolitical risks involving some key producers, shifts
+in policies by OPEC, and weakening global growth prospects (Baffes et al. 2015; Baumeister and
+Kilian 2016b; World Bank 2018a). Supply factors accounted for about two-thirds of the oil price
+decline (Figure 2; Baffes et al. 2015b). 11 It was accompanied by a period of slowing global
+potential growth (World Bank 2018c, 2019b).
+
+4.2 Estimating the impact of past oil price plunges on output
+
+Most of the past oil price plunges were triggered by weakening global growth, which contributed
+to the decline in oil prices, and were followed by slow recoveries (refer to Section 4.1 above).
+
+
+11
+     Other estimates put the share of supply factors at just under half (Baumeister and Hamilton 2019).
+
+                                                           11
+Although virtually all episodes of significant oil price declines since 1984 have been accompanied
+by monetary policy loosening in advanced economies, several were accompanied or followed by
+financial market strains.
+
+Methodology. A local projections model is estimated for 155 EMDEs, of which 36 are energy
+exporters, for 1970-2018. The model estimates the response of real output, investment, and
+consumption to the seven oil price plunges described above over the following five years. It
+distinguishes between demand-driven (1998, 2001, 2008-09) and supply-driven oil price plunges
+(1985-86, 2014-16).
+
+Model specification. The responses of real output, investment, consumption, and productivity
+growth—denoted by yt—following oil price collapses are estimated using the local projections
+model of Jordà (2005). The model is given by the following equation:
+
+                                    yt =
+                                       + h, j α( h ), j + β( h ) Ε t , j + ∑ sp=  q             l
+                                                                                    1 γ( h ) X t − s , j
+                                                                               1 ∑l =
+                                  p
+                                 =  +∑
+                                  s 1      δ( h ), s yt − s , j + u ( h ) t , j
+
+
+where h = 0, …, 5 is the forecast horizon, α(h),j is country j fixed effects, and u(h)t,j is an error term.
+The coefficient of interest β(h) captures the dynamic multiplier effect (impulse response) of the
+                                                                                 ������������
+dependent variable with respect to the event dummy variable ������������������������,������������ . ������������������������ ,������������ represents a set of control
+
+variables with coefficients γ(h). The specification controls for lagged dependent variables yt-s,j . The
+number of lags for each variable is denoted by p and varies from 1 to 3 for the estimation. While
+the supply shock is represented by a univariate model, the demand shock controls for lagged output
+and investment as critical macroeconomic determinants. Driscoll and Kraay (1998) standard errors
+are used to address cross-sectional and serial correlation. The model is estimated separately for all
+EMDEs, for energy-exporting EMDEs, and for other EMDEs, and for subgroups of EMDEs with
+fixed and floating exchange rates and with high and low government debt.
+
+Definitions. Oil price collapses are defined as years in which oil prices fell by 30 percent or more
+over a six-month period: 1985-86, 1991, 1998, 2001, 2008-09, 2014-16. Largely supply-driven
+collapses occurred in 1985-86 and 2014-16 when OPEC abandoned production agreements in
+favor of raising market share; the other oil price collapses were largely demand-driven as
+recessions lowered energy demand (Baffes et al. 2015).
+
+
+                                                                       12
+Data. Using annual data, the sample includes 155 EMDEs for 1970-2018. This includes 36
+EMDEs that are energy exporting (oil, gas, or coal), defined as in Appendix 1, and 120 other
+EMDEs. Data on output, investment, consumption, and productivity are drawn from the World
+Bank World Development Indicators. The exchange rate classification follows the IMF’s Annual
+Report on Exchange Arrangements and Restrictions. High (low) public debt is above (below) 70
+percent of GDP for high-income EMDEs and 30 percent of GDP for upper-middle-income, lower-
+middle-income, and low-income EMDEs.
+
+4.3 Empirical results from the local projections model
+
+Demand-driven versus supply-driven oil price plunges. EMDE output evolved differently in
+demand-driven and supply-driven oil price plunges. In the first year of both supply- and demand-
+driven oil price plunges, EMDE output fell by about 0.5 and 0.3 percent, respectively (Figure 5).
+The recovery, however, differed: output recovered after demand-driven oil price plunges and, three
+years later, had returned to the baseline; after supply-driven oil price plunges, EMDE output did
+not recover and remained below the baseline three years later. 12
+
+Demand-driven plunges. The impact on energy exporters and importers were similar for demand-
+driven plunges. Previous demand-driven oil price plunges were associated with global recessions
+or slowdowns, which tended to be associated with an initial output decline in EMDEs (0.3 percent)
+in the year of the plunge that was recouped within three years. Output, investment, and
+consumption in energy exporters and other EMDEs recovered together with oil prices.
+
+Supply-driven plunges. The impact from supply-driven oil price plunges left a lasting impact on
+EMDE energy exporters. Supply-driven oil price plunges were associated with initial output losses
+in energy exporters of somewhat larger magnitude than those associated with demand-driven
+plunges (0.5 percent in the first year). Almost three quarters of these output losses persisted into
+the third year. Three years after the shock, investment and consumption in energy exporters were
+still 1.4 and 0.6 percent, respectively, below baseline levels. These lasting losses may have
+
+
+12
+   Based on vector autoregression models, existing studies find wide ranges of impacts. A demand-driven 30 percent
+oil price decline reduces output by 0-5 percent over a year or two, an oil-specific demand decline reduces output by
+0.3-4 percent over a year or two, and a supply-driven oil price decline reduces output by 0-15 percent over a year or
+two. These studies include Aastveit, Bjørland, and Thorsrud (2015); Baumeister and Hamilton (2019); Baumeister
+and Peersman (2013); Cashin, Mohaddes, and Raissi (2014); Killian (2009); Kilian and Murphy (2014); Mohaddes
+and Raissi (2019); and Peersman and Robays (2012).
+
+                                                         13
+reflected a reassessment of long-term growth prospects of energy exporters in supply-driven oil
+price drops. Meanwhile, growth gains in energy importers were gradual and delayed (de Michalis,
+Ferreira, and Iacovelli forthcoming).
+
+Policies mattered. Energy-exporters tend to be particularly hard-hit by supply-driven oil price
+plunges, but even in those plunges, energy-exporting EMDEs with flexible exchange rates, lower
+debt, and more diversified export bases suffered smaller output losses than those with fixed
+exchange rates, higher debt, and less diversified export bases. 13
+
+
+
+     5. Lessons from the 2014-16 oil price plunge and comparison with the 2020 episode
+
+The 2014-16 oil price plunge was followed by a sharp global growth decline. The oil price plunge
+of 2020 is similarly unlikely, by itself, to trigger a global growth rebound because of its demand-
+driven nature and the disruptions that it may cause in energy-exporting EMDEs.
+
+5.1 The 2014-16 oil price plunge
+
+In late 2014, the 50 percent decline in oil prices between June and November 2014 was expected
+to lift global GDP by around 0.3-0.7 percent (Arezki and Blanchard 2014). The cheaper cost of a
+critical input into global production was expected to raise global activity, and the transfer of
+income and wealth from energy-exporting economies with higher savings rates to energy-
+importing economies, with higher propensities to spend, was also expected to boost global demand
+(Baffes et al. 2015; World Bank 2015a). While lower oil prices were expected to depress
+investment in the oil industry, this was expected to be more than offset by the boost to consumption
+and energy-intensive sectors (transportation, manufacturing, and agriculture).
+
+However, the expected “shot in the arm” to global growth was slow to materialize. Instead, in
+2016, global growth slowed to a near-post-crisis low of 2.6 percent. Global growth only picked up
+in 2017-18 once considerable policy stimulus was put in place in major economies. The
+disappointing short-term growth trajectory reflected several factors as outlined below.
+
+
+
+
+13
+  In demand-driven plunges, similar patterns emerged but differences were less pronounced and there was wide
+heterogeneity between countries.
+
+                                                    14
+Impact on energy exporters, and policy response. The impact of the oil price plunge of 2014-16
+on commodity exporters was severe. Growth slowed in more than 70 percent of energy-exporting
+EMDEs in 2015 and 2016, with many facing declining consumption and investment (Figure 6).
+Since energy-exporting countries are generally less diversified than other commodity exporters,
+they are particularly vulnerable to oil price declines (Aslam et al. 2016).
+
+Many EMDE energy exporters, relying heavily on hydrocarbon revenues, were forced to tighten
+fiscal policies to realign spending with revenues, despite rising economic slack and diminishing
+long-term growth prospects. 14 Some were able to at least partially mitigate exchange rate and fiscal
+pressures by drawing on sovereign wealth funds (World Bank 2015a).
+
+Fiscal policy tightening was often compounded by monetary policy tightening, and exchange rate
+market intervention to support currencies or currency pegs. As foreign reserves eroded, several
+countries eventually adopted more flexible exchange rate regimes as part of the adjustment to low
+oil prices. A small number of countries with severe liquidity pressures resorted to unconventional
+measures (Sommer et al. 2016).
+
+Adverse spillovers from the slowdown in energy exporters. Headwinds in Russia and the Gulf
+Cooperation Council (GCC) economies reduced within-region flows of trade, remittances, foreign
+direct investment, and official grants (World Bank 2015a, 2016c). Energy-exporting low-income
+countries (Chad, South Sudan) were hit particularly hard, as the effect of the oil price shock was
+exacerbated by conflict and deteriorating security conditions.
+
+Impact on energy importers, and policy response. Energy-importing EMDEs and advanced
+economies experienced a stalled recovery in 2015-16. In part, this also reflected China’s energy
+mix and rebalancing needs (Figure 7). China is the second-largest oil importer in the world, but
+the share of oil in its overall energy consumption is the lowest among G20 economies. Regulated
+fuel costs and a low energy and transportation weight in consumer baskets limit real income gains
+for consumers from lower oil prices (World Bank 2015a). The oil price plunge also coincided with
+
+
+
+
+14
+  See Danforth, Medas, and Salins (2016) and World Bank (2016a, 2016b, 2017a). The effects of the price shock
+were also exacerbated by idiosyncratic factors, including sanctions on Russia and conflict and geopolitical tensions in
+the Middle East and North Africa region.
+
+
+                                                          15
+a policy-guided near halving of investment growth, which tends to be resource-intensive, to ease
+growth to a more sustainable level. 15
+
+In the United States, the boost to private consumption from lower oil prices was partly offset in
+the short run by a sharper-than-expected contraction in capital spending in the energy sector
+(Baumeister and Kilian 2016a). This investment is highly price elastic (Bjørnland, Nordvik, and
+Rohrer 2017; Cakir Melek 2018; Newell and Prest 2019): mining investment halved in the two
+years that followed the mid-2014 oil price plunge, lowering growth by 0.2 percentage point in both
+2015 and 2016.
+
+Additionally, the impact also reflects EMDE energy importers’ lower sensitivity to oil price
+shocks. Activity in energy-importing EMDEs is less responsive to oil price shocks than that in
+major advanced economies (Aastveit, Bjørnland, and Thorsrud 2014; Caldara, Cavallo, and
+Iacoviello 2019). This reflects less oil-intensive energy mixes, less energy-intensive consumption,
+and energy price controls that limit the pass-through of world prices to domestic retail prices. In
+addition, many countries seized the opportunity to lower energy subsidies (Section 6). While this
+improved fiscal and external positions, it dampened the benefit to activity in energy-importing
+EMDEs.
+
+A number of non-oil commodity exporters and commodity importers raised monetary policy rates
+during 2015–16 to stem currency depreciation. Others reacted to above-target inflation. In some
+cases, fiscal deteriorations amid slow growth reduced government revenues and required spending
+cuts.
+
+5.2 The 2020 oil price plunge
+
+Low oil prices are likely to provide, at best, temporary initial support to growth once restrictions
+to economic activity are lifted and until excess inventories are unwound. In the very short term,
+restrictions to stem the pandemic are likely to close off the main channel for low oil prices to
+benefit growth, by limiting transport and other energy-intensive activities. However, even once
+these restrictions are lifted and energy demand recovers, the current demand-driven oil price
+plunge is likely to be associated with deep and lasting output losses.
+
+
+
+15
+     See Huidrom, Kose, and Ohnsorge (2017); Kang and Liao (2016); and World Bank (2016a).
+
+                                                       16
+More than in previous demand-driven oil price plunges, the adverse impacts on energy exporters—
+regardless of whether they are advanced economies or EMDEs—may outweigh benefits to activity
+in energy importers. 16 Adverse effects are likely to be compounded by new headwinds, including
+elevated macro-financial vulnerabilities that were less relevant in previous oil price plunges, or
+even a second wave of infections. That said, there might be a short window early in the recovery
+when still-high inventories depress prices and support activity.
+
+Implications of the demand-driven nature of oil price plunge. In contrast to the oil price plunge
+of 2014-16, the 2020 episode has been mainly driven by a collapse in energy demand resulting
+from restrictions to stem the spread of the pandemic and the global recession (Figure 8). Once the
+global recovery is underway, and excess inventories are unwound, oil prices would be expected to
+increase again in tandem with global growth.
+
+Coincidence with other shocks. The public health crisis, a collapse in global trade and tourism,
+and an unprecedented capital outflows from EMDEs have put economic and financial pressures
+on energy exporters and importers alike (Figure 8). The number of confirmed infections has soared
+in energy-exporting EMDEs, as well as energy-importing EMDEs, and the effect of the sharp loss
+in consumer and investor confidence may linger long after the pandemic has subsided.
+
+Exacerbating the downturn is the collapse in global trade. Global manufacturing activity, tourism,
+and trade have plunged amid closures of non-essential services, shops, factories, and public spaces;
+stay-at-home orders travel restrictions; and a high degree of risk aversion of consumers (World
+Bank 2020b). Likewise, the flight to safety has resulted in a sharp tightening of financial conditions
+in EMDEs. Global equity markets have fallen sharply, with extreme volatility. EMDE currencies
+have weakened substantially against the U.S. dollar despite foreign exchange market interventions
+by central banks. Yield spreads on EMDE bond issues have risen steeply.
+
+Obstacles to policy effectiveness in EMDEs. Many central banks and governments have engaged
+in large-scale monetary and fiscal stimulus to support their economies amid the pandemic (World
+Bank 2020b). However, these may not reach the most vulnerable groups. This is of particular
+concern for economies with widespread informality. Large sections of their population do not have
+bank accounts, which would usually provide a means for delivering direct cash support quickly
+
+16
+  The 2014-16 oil price plunge is a reminder that this will also be a challenge, although to a lesser extent, in energy
+importing economies with sizable energy sectors.
+
+                                                          17
+(World Bank 2020b). By the same token, many people are outside the formal social benefit and
+tax system, and would not benefit from tax deferments and cuts, or from higher regular social
+benefits.
+
+Macro-financial vulnerabilities in energy exporters. During the oil price plunge of 2014-16,
+energy exporters with highly concentrated export and revenues bases, weak fiscal positions, and
+fixed exchange rates witnessed considerably steeper growth slowdowns. In today’s context, these
+effects are likely to be more pronounced since there has been limited progress in export
+diversification, and fiscal positions are weaker than they were before the 2014-16 oil price plunge.
+
+In 2014-16, growth in energy exporters with a higher degree of economic diversification (for
+example, Bahrain, Ghana, Malaysia, Qatar), and a floating exchange rate regime (for example,
+Albania, Russia), recovered more quickly from the fall in oil prices than in those with low
+diversification and fixed exchange rates. Fiscal balances also fared better in energy-exporting
+EMDEs with more flexible exchange rate regimes, in part because real exchange rate depreciation
+mitigated revenue declines and spurred needed adjustment within the private sector. Growth
+remained stronger in energy exporters with larger foreign reserves and low historical inflation
+volatility (Grigoli, Herman, and Swiston 2017; World Bank 2016a). The need for fiscal adjustment
+was greater in energy-exporting EMDEs that lacked the necessary buffers (Husain et al. 2015;
+World Bank 2015b). Energy-exporting EMDEs with higher reliance on oil-related revenues faced
+a more pronounced deterioration in fiscal balances than in those economies that managed to
+diversify government revenue away from oil before 2014.
+
+Energy exporters remain highly reliant on commodity exports and have more precarious fiscal
+positions (Figure 9). In 2019, the energy sector continued to account for 12 percent of government
+revenues in the average energy-exporting EMDE. Government debt in energy-exporting EMDEs
+had risen to 50 percent of GDP in 2019 from 27 percent of GDP in 2013, and the fiscal balance
+has turned from near-balance in 2013 to a deficit of 2.7 percent of GDP in 2019 (IMF 2017a;
+World Bank 2017a). As a result, even after the public health crisis subsides, the need to shore up
+public finances is likely to weigh on their recovery.
+
+
+
+
+                                                 18
+   6. Policy reforms following the 2014-16 oil price plunge
+
+The 2014-16 oil price plunge forced many energy exporters into procyclical fiscal tightening that
+deepened their downturns. Many energy exporters recognized an urgent need to render both their
+economies and their public finances more resilient, and embarked on reforms to encourage
+diversification, strengthen non-oil revenues, and cut poorly targeted subsidies (Stocker et al. 2018;
+Figure 10). Energy-importing EMDEs also seized the opportunity of low oil prices to cut energy
+subsidies. Current low oil prices may provide a window of opportunity to put in place mechanisms
+that permanently eliminate energy subsidies.
+
+6.1 Reforms in energy exporters
+
+Energy exporters initiated economic diversification programs, energy subsidy reforms, and
+measures to strengthen non-energy government revenues.
+
+Diversification programs. Before the current plunge in oil prices, hydrocarbon sector activity
+represented more than one-third of GDP in a number of countries in Central Asia, Sub-Saharan
+Africa, and, in particular, the Middle East. Oil production represented the majority of government
+revenue and exports in most energy-exporting EMDEs in 2013. This suggests an untapped
+potential for greater diversification of exports and government revenues, which would bolster
+long-term growth prospects and improve these economies’ resilience to external shocks (Hesse
+2008; IMF 2016; Lederman and Maloney 2007).
+
+Following the 2014-16 oil price collapse, several large energy-exporting EMDEs laid out medium-
+to long-term plans to reduce their reliance on the energy sector. As part of Saudi Arabia’s 2016
+Vision 2030 plan, the National Transformation Program targeted an increase in non-oil commodity
+exports and non-oil government revenues (Kingdom of Saudi Arabia 2016; World Bank 2016c).
+Saudi Arabia’s fiscal non-oil revenues improved from 7.7 percent of GDP in 2016 to 10 percent
+of GDP in 2019. Nigeria identified several sectors to promote greater diversification of export
+earnings and government revenues (Nigeria Ministry of Budget and National Planning 2017).
+Kazakhstan’s “100 Concrete Steps” program, adopted in 2015, aimed to diversify the economy
+and improve competitiveness and transparency. By the start of 2020, Kazakhstan has completed
+more than half of these 100 steps, including efforts to improve governance. However, efforts to
+
+
+
+                                                 19
+boost industrialization have encountered challenges, while plans to increase private land
+ownership have been delayed.
+
+Efforts to encourage diversification have continued and include: reducing labor market rigidities
+(for example, Saudi Arabia, Oman, Qatar), supporting foreign and private investment (for
+example, Saudi Arabia), expanding infrastructure investment (for example, Malaysia), improving
+the business environment (for example, Algeria, Brunei Darussalam, the GCC countries,
+Kazakhstan, Nigeria, Russia), expanding deeper trade integration within the Eurasian Economic
+Union (for example, Russia), and strategic investment plans in renewables energy (Azerbaijan, the
+GCC countries). However, in some cases, the structural reform agenda has faced legislative or
+implementation delays (for example, Algeria, Kazakhstan).
+
+Energy subsidy reform. The sharp reduction in government revenues among energy-exporting
+EMDEs led to an increased emphasis on reducing energy subsidies to restore fiscal space,
+discourage wasteful energy consumption, and reallocate spending to programs that better target
+the poor (IMF 2017b). Between mid-2014 and end-2016, more than half of energy-exporting
+EMDEs reformed energy subsidies, including countries in the Middle East and North Africa, Sub-
+Saharan Africa, East Asia, Latin America, and Central Asia. 17 A number of energy exporters have
+also reduced utility subsidies although, during the COVID-19 pandemic, subsidies were raised
+again in some countries (for example, Gabon, Indonesia, Oman, Saudi Arabia, United Arab
+Emirates).
+
+In some cases, subsidy reform was a significant break from past policy (Krane and Hung 2016;
+World Bank 2017b). Encouragingly, the design and implementation of recent energy subsidy
+reforms have been superior to past efforts, which were poorly phased and hampered by insufficient
+communication to the public about the rationale for reform (Asamoah, Hanedar, and Shang 2017;
+Clements et al. 2013). In many cases, recent reforms have also helpfully included measures to
+mitigate the impact on the poor and to strengthen social safety nets (for example, Algeria, Angola,
+Saudi Arabia). More recently, Nigeria announced plans to eliminate energy subsidies. However,
+
+
+
+17
+  Energy subsidies were reformed between mid-2014 and late 2017 in Algeria, Bahrain, Cameroon, Ecuador, Gabon,
+Ghana, the Islamic Republic of Iran, Iraq, Kazakhstan, Kuwait, Malaysia, Nigeria, Oman, Qatar, Saudi Arabia, Sudan,
+Trinidad and Tobago, Turkmenistan, the United Arab Emirates, and Yemen. Reforms in Angola, Indonesia, and
+Nigeria, were, however, not sustained once oil prices rose.
+
+                                                        20
+revenue-enhancing energy price reforms have remained absent in some countries (for example,
+Cameroon).
+
+Fiscal reforms. Several countries have implemented tax reforms to compensate for the loss of
+government revenues and to insulate themselves from future oil price fluctuations (World Bank
+2018c). This has included the introduction of taxes on goods and services or value-added taxes
+(for example, Bahrain, Malaysia, Saudi Arabia, the United Arab Emirates), as well as raising
+existing VAT or excise tax rates (Bahrain, Colombia, Oman, Saudi Arabia, United Arab Emirates).
+Russia has implemented a fiscal rule that targets a primary deficit of 0.5 percent of GDP at the
+benchmark oil price of $40 per barrel (in 2017 U.S. dollars). Any excess fiscal resources that are
+generated from higher oil prices are saved in the National Welfare Fund. The assets from this fund
+have already helped Russia support its economy and extend benefits to vulnerable households
+during the recent pandemic. However implementation of fiscal reforms has stalled in some cases
+(for example, Kuwait, Oman, Qatar), while exemptions have limited revenue growth in some
+others (Malaysia).
+
+6.2 Reforms in energy importers
+
+Energy subsidy reform. Like energy-exporting EMDEs, energy-importing EMDEs took
+advantage of declining oil prices to begin dismantling energy subsidies, which tend to
+disproportionately benefit those with higher incomes. In addition, they can crowd out public
+investment and encourage more intensive use of fossil fuels (Arze del Granado, Coady, and
+Gillingham 2012). Several countries have implemented such reforms in response to the 2014-16
+oil price plunge (for example, China, the Arab Republic of Egypt, Mexico, Morocco, Tunisia), but
+slippages in implementation have occurred in some cases (for example, Egypt, Mexico). 18 In
+response to the COVID-19 pandemic, some governments have provided fuel price discounts to
+some sectors (for example, Egypt) or increased subsidies to vulnerable households (for example,
+Guatemala, Montenegro, Ukraine).
+
+Other reforms. Other reforms have aimed to raise revenues, with some countries increasing taxes
+on energy or energy-dependent sectors such as transportation (for example, Bangladesh, China,
+Egypt, Mozambique, Rwanda, South Africa, Vietnam; IEA 2015; IMF 2016; Kojima 2016). These
+
+
+18
+     Mexico has a diversified export base and, hence, is classified as an energy importer.
+
+                                                            21
+steps also included measures to avoid energy subsidies reemerging if oil prices rebound—
+automatic pricing mechanisms or full energy price liberalization have been common (for example,
+China, Côte d’Ivoire, India, Jordan, Madagascar, Mozambique, Mexico, Thailand, Ukraine;
+Asamoah, Hanedar, and Shang 2017; Beylis and Cunha 2017). 19
+
+6.3 Remaining challenges
+
+Some of these policies have yet to bear fruit. Notwithstanding fiscal and energy subsidy reforms
+in energy exporters, fiscal break-even prices—the oil prices at which government budgets are
+balanced—in almost all energy-exporting EMDEs exceed current prices, often by considerable
+margins. Energy subsidies still represented an average of 4 percent of GDP as of 2018 among
+energy-exporting EMDEs, many of which implemented reforms 2014-16 (Figure 10). In 2019, the
+share of commodity exports in total goods exports remained as high now as in 2013, before the
+last oil price plunge. The recent oil price plunge may provide further momentum to proceed with
+planned reforms and deepen them once the immediate health crisis subsides.
+
+Energy importers, in contrast, could take advantage of lower energy prices to lower subsidies—
+which averaged over 2.5 percent of GDP in 2018—and utilize these resources to finance urgent
+health care needs. In energy exporters and importers alike, there is an opportunity to put in place
+reforms now that are non-binding in the short term but address long-standing inefficiencies and
+fiscal costs in the long term.
+
+Fiscal space generated by subsidy reforms. Replacing energy subsidies with expanded and better-
+targeted social safety nets, coupled with structural reforms, can improve fiscal positions while
+supporting low-income households. 20 Policies to reduce subsidies can help promote growth
+because fiscal savings generated by lower subsidies can fund productivity-enhancing education
+and infrastructure. For example, in Egypt, fiscal savings from the energy subsidy reforms were
+redirected towards social spending (ESMAP 2017b). These policies can also foster low-carbon
+transition and promote green energy (Monasterolo and Raberto 2019; Mundaca 2017). For energy-
+
+
+
+19
+   In Mozambique, the elimination of fuel subsidies, the introduction of an automatic fuel price adjustment, and
+increased tariffs on electricity and public transportation, contributed to the 2 percentage points of GDP narrowing of
+the primary fiscal balance between 2016 and 2018.
+20
+   For details, see Coady et al. (2017, 2019); Guénette (2020); Stocker et al. (2018); and World Bank (2014, 2015a,
+2015b).
+
+                                                         22
+exporting EMDEs, eliminating costly energy subsidies could help offset the collapse in revenue
+from oil extraction given that oil prices are well below their fiscal breakeven points.
+
+Increasing the chances of success of subsidy reform. Energy subsidy reform raises formidable
+political-economy challenges (Inchauste and Victor 2017). The different prongs of reforms,
+however, need to be carefully sequenced and communicated to avoid delays, social unrest or
+reversals, as has been the experience in some client countries (for example, Ecuador; Worley,
+Pasquier, and Canpolat 2018). Reforms may prove more lasting if a few principles are observed in
+their implementation.
+
+   •   Entrenching reform: Reforms formally embedded in legislation may be more likely to be
+       enforced and sustained once oil prices rise again.
+   •   Transparency: Reforms are more likely to be sustained if price setting can be de-
+       politicized (Inchauste and Victor 2017). This can be achieved with a transparent formula
+       for setting energy prices.
+   •   Frequent price adjustments: A formula with more frequent price adjustments can help
+       avoid larger and more disruptive price changes, especially once oil prices return to more
+       normal levels.
+   •   Tax design for price stability: A transparent formula for frequent price adjustments can
+       be accompanied by combination of fixed and variable taxes that can smooth price volatility,
+       such as in the case of Chile.
+   •   Supporting reforms: Subsidy cuts that are accompanied by cuts in the cost of other
+       household public services, such as school or public transport fees, or increases in other
+       social benefits can help build public support for reform. In India, for example, the removal
+       of price controls was accompanied by targeted cash transfers and in Brazil by targeted
+       assistance to low-income households for energy conservation (Deichmann and Zhang
+       2013). Such supporting reforms need to be accompanied by improved capacity to
+       implement benefit programs (Inchauste and Victor 2017).
+   •   Public awareness: Awareness campaign can highlight the benefits of subsidy reforms, in
+       terms of giving greater room for higher-priority spending, and thus raise public support for
+       reform (El-Katiri and Fattouh 2017).
+
+
+
+                                                 23
+Role of competition, legal and regulatory frameworks. Improving the macroeconomic framework
+and competitive environment can be more effective in improving the financial positions of both
+consumers and producers than energy subsidies. Carefully designed and properly enforced
+antitrust laws and consumer protection legislation are essential components of institutional
+frameworks that support market mechanisms. A sound legal and regulatory framework favoring
+competitive markets provides a more effective response to many of the problems that subsidies
+attempt to address. For example, the removal of price controls and barriers to entry in the
+transportation sector significantly increased competition and lowered transportation costs in
+Rwanda (Teravaninthorn and Raballand 2009). Even in the case where incumbent firms
+maintained outsized market shares, the presence of competition and the potential for new entrants
+significantly lowered their markups.
+
+Energy pricing reform. Even in EMDEs where energy subsidies have been eliminated, the current
+low oil prices provide an opportunity to introduce carbon pricing and other energy taxation that
+will discourage inefficient consumption as global oil prices rise again. As a cost-effective
+instrument for meeting climate targets, 57 initiatives (including 28 emission trading systems) were
+implemented at the national and subnational level in 2019, covering about 20 percent of global
+green-house gas emissions (World Bank 2019a). Existing carbon pricing is considered insufficient
+to meet climate targets, so policymakers should seize the current opportunity of exceptionally low
+energy prices to put in place pricing formulas now that encourage more energy-efficient growth
+once the recovery gathers momentum (World Bank 2019a). Finally, support measures for energy-
+intensive industries during the current pandemic could be made contingent on improvements in
+fuel efficiency.
+
+
+
+   7. Conclusion
+
+The restrictions imposed to stem the pandemic and the global recession triggered by the outbreak
+of the COVID-19 pandemic have been accompanied by an unprecedented collapse in oil demand
+and prices. Unfortunately, the price decline is unlikely to provide much of an immediate buffer for
+global growth, because of the impact of mitigation measures that are constraining energy-intensive
+activities and because energy-exporting EMDEs have less fiscal and monetary policy room to
+
+
+                                                24
+counter the impact on their economies. That said, there might be a short window early in a recovery
+when still-high inventories depress prices and support activity.
+
+Currently, responding to the health emergency and its impact on economic activity remains the
+immediate priority. In both energy exporters and importers, support measures could focus on
+boosting health infrastructure and capacity, in addition to protecting employment and social safety
+nets. To alleviate the burden on fiscal balance sheets, energy exporters and importers with high
+debt levels may want to preemptively identify priority expenditures that need to be safeguarded if
+financing shrinks, as well as lower-priority, poorly targeted, or inefficient spending programs that
+can be delayed or suspended. Additional liquidity could be injected in economies with low and
+stable inflation to enable banks to extend credit to firms and households, and to prevent widespread
+insolvency.
+
+The economic damage of the pandemic could be long lasting, as it will take considerable time to
+repair the disruptions to labor markets, value chains, and balance sheets, and to restore consumers’
+confidence in the safety of retail, leisure, and workspaces (World Bank 2020b). Economic and
+financial weaknesses in energy exporters are especially likely to pose difficulties. This highlights
+the importance of ensuring that necessary fiscal support during the pandemic be accompanied by
+credible commitments to restore fiscal sustainability once it subsides. For the energy exporters,
+this will require pressing ahead with the reform programs that many launched after the price plunge
+of 2014-16 (Section 6). Some energy-exporting EMDEs have successfully diversified their
+economies after implementing measures to stimulate non-energy exports, as part of a broad
+program of reforms to improve the business environment, education, and skills acquisition (for
+example, Malaysia, Mexico; Callen et al. 2014). For the energy-importing EMDEs, the plunge in
+oil prices is an opportunity to revisit energy pricing and make lasting fiscal room for higher-priority
+spending to reignite long-term growth prospects (World Bank 2020b).
+
+
+
+
+                                                  25
+Figure 1. Oil price decline
+
+A. Spot oil prices                          B. Commodity price changes         during
+                                            January 22-April 21, 2020
+
+
+
+
+C. Largest one-month declines in oil prices D. Largest cumulative three-month declines
+since 1970                                  in oil prices since 1970
+
+
+
+
+E. OECD oil inventories                     F. U.S. oil inventories
+
+
+
+
+                                         26
+Source: Bloomberg; Energy Information Administration; Haver Analytics; International Energy Agency; Thomson
+Reuters; World Bank.
+Note: Oil price refers to Brent oil prices.
+A. January 22, 2020 is the date the first human-to-human COVID-19 transmission was announced. Last
+observation is May 20, 2020. Data is from Bloomberg and U.S. Energy Information Administration.
+B. “Base metals” is an unweighted average for aluminum, copper, lead, nickel, tin, and zinc. “Agriculture” shows
+an unweighted average for corn, rice, and wheat. “Oil price” refers to European Brent spot oil price. Figure shows
+the change in commodity prices between January 22, 2020, and April 21, 2020, which was the trough
+in Brent prices.
+C.D. Figure shows the largest declines in oil prices since 1970. Dates on the horizontal axis indicate the date in
+which the decline occurred. Months with consecutive declines are omitted.
+E. Days of demand represent the level of OECD oil inventories at the end of the quarter (government and industry)
+divided by average daily OECD oil demand. Last observation is 2020 Q1.
+F. Last observation is May 15, 2020.
+
+
+
+
+                                                       27
+Figure 2. Drivers of the 2020 oil price plunge
+
+A. Change in transport demand                    B. Container shipping throughput volume
+                                                 growth
+
+
+
+
+C. Final oil consumption, by country and D. Global oil demand growth
+sector
+
+
+
+
+E. Impact of a 1 percentage point growth F. Contribution to largest oil price declines
+decline in major economies on oil prices since 1970
+
+
+
+
+                                            28
+Source: Bloomberg; Institute of Shipping Economics and Logistics; International Energy Agency; New York
+Metropolitan Transportation Authority; Ministry of Transport of China; World Bank.
+A. “NYC subway ridership” is the sum of entries into each station in New York’s Metropolitan Transportation
+Authority network, which serves a population of 15.3 million people across a 5,000-square-mile travel area
+surrounding New York City, including Long Island, southeastern New York State, and Connecticut. “China
+passenger journeys” include all daily passenger journeys in China.
+B. Year-on-year growth. Last observation is March 2020.
+C. Percent of global oil consumption.
+D. Shaded area shows IEA estimates for year-on-year demand growth in 2020Q2 and 2020Q3.
+E. Based on a Bayesian vector autoregressive estimation. Cumulative response to a 1-percentage-point decline on
+oil prices on impact or after four quarters. Orange whiskers reflect the 16th-84th percentile confidence bands. The
+model includes U.S. growth, Euro Area growth, 10-year U.S. government bond interest rate, VIX volatility index,
+China’s growth, oil price, and commodity-importing or commodity-exporting EMDE growth over 2000Q1 to
+2019Q2. The model has four lags. Aggregate growth rates calculated using GDP weights at 2010 prices and market
+exchange rates.
+F. Chart shows the contribution to explained six-month log changes (in percent) in oil prices. Decomposition based
+on structural vector autoregression estimation. For each of the seven episodes, only the month with the deepest six-
+month oil price plunge is shown (consecutive months are not shown). The gap between the total price decline and
+the contributions of demand and supply represents speculative demand factor.
+
+
+
+
+                                                        29
+Figure 3. Oil markets during past recessions and travel disruptions
+
+A. Oil price                                                B. Oil consumption                  growth       around
+                                                            recessions
+
+
+
+
+Source: Bloomberg; BP Statistical Review; International Energy Agency; World Bank.
+A. The y-axis is a price index, with “100=t” indicating prices at the start of the events. The x-axis shows the passage
+of time (in days). Start dates for the two events are the first trading day before a major event occurred: September
+10, 2001, for 9/11; and January 22, 2020, for COVID-19. Swath shows the four global recessions: 1974-75, 1981-
+82, 1990-91, and 2008-09. For the first two recessions, daily data were unavailable, so monthly percent changes
+were taken (assuming each month lasts 22 working days).
+B. Dates of recessions are taken from Kose, Sugawara, and Terrones (2020). The four recessions included are:
+1974-75; 1981-82; 1990-91; and 2008-09."Before" shows average annual growth rates in commodity consumption
+over the three years prior to the recession. "During" shows average annual growth rates of recession years. Note
+that in 1980 a global slowdown occurred with similar negative growth rates in consumption; as such the "Before"
+period covers 1977-79.
+
+
+
+
+                                                          30
+Figure 4. Oil market developments during past oil price plunges
+
+A. Global oil price                                    B. Global oil production
+
+
+
+
+C. Global rig count                                    D. Oil demand growth
+
+
+
+
+Source: Baker Hughes; Energy Information Administration; International Energy Agency; World Bank.
+Note: Horizontal axis shows months (A-C) or years (D) from pre-plunge peak in t = 0. Plunges begin (t = 1) in
+March 2020, July 2014, September 2008, December 2000, November 1997, and November 1990, and December
+1985. All oil prices scaled such that 100 = pre-plunge peak.
+D. Refers to annual growth in refined petroleum consumption, scaled such that 100 = pre-plunge growth (1989,
+1996, 1999, 2007, 2013).
+
+
+
+
+                                                     31
+Figure 5. Macroeconomic developments in EMDEs during past oil price plunges
+A. Cumulative impulse response of output, by B. Cumulative impulse response of output to
+type of oil price plunge                     demand-driven oil price plunges
+
+
+
+
+C. Cumulative impulse response of output to D. Supply-driven oil price plunges: Cumulative
+supply-driven oil price plunges             investment and consumption responses in
+                                            energy-exporting EMDEs
+
+
+
+
+E.    Demand-driven  oil   price-plunges: F. Supply-driven oil price plunges: Cumulative
+Cumulative output responses of energy- output responses of energy-exporting EMDEs
+exporting EMDEs
+
+
+
+
+Source: Haver Analytics; International Monetary Fund; World Bank.
+Note: Cumulative impulse responses of real output (A, B, C, E, F), real investment (D), and consumption (D) in
+EMDEs (A, B, C) or in energy-exporting EMDEs (D, E, F) in response to an oil price plunge, based on a local
+projections model estimated for 155 EMDEs, of which 36 are energy exporters (oil, gas, or coal), for 1970-2018.
+Numbers on the horizontal axes indicate years since the oil price plunge, which occurs at t=0. Oil price plunges of
+
+                                                        32
+more than 30 percent over seven months occurred in 1985-86 (supply-driven), 1990-91 (demand-driven), 1998
+(demand-driven), 2001 (demand-driven), 2008-09 (demand-driven), and 2014-16 (supply-driven).
+E.F. Output declines in the year following the oil price plunge. High (low) debt is government debt above (below)
+30 percent of GDP for upper-middle and lower-middle income economies and 70 percent of GDP for high-income
+economies. Fixed exchange rates are as defined in IMF’s Annual Report on Exchange Arrangements and
+Restrictions.
+
+
+
+
+                                                       33
+Figure 6. Impact of 2014-16 oil price plunge on energy exporters
+A. Cumulative output increase for energy- B. Share of energy-exporting EMDEs with
+exporting EMDEs, 2014-16                  increasing/decreasing growth
+
+
+
+
+C. Foreign exchange reserves and nominal D. Change in fiscal balance in energy exporters,
+effective exchange rate appreciation of energy 2014-16
+exporters, 2014-16
+Index, 100=January 2014                                             Percentage points of GDP
+120                                                                  0
+
+100
+                                                                     -5
+ 80
+ 60                                                               -10
+
+ 40
+                                                                  -15
+ 20
+  0                                                               -20
+                                                                           Above     Below       Floating     Pegged
+        Floating    Pegged      Floating    Pegged                        average average
+         Foreign reserves         Exchange rate                              Oil revenue            Exchange rate
+Source: Bank for International Settlements; Haver Analytics; International Monetary Fund; United Nations Conference on Trade
+and Development (UNCTAD); World Bank.
+A.C.D. Unweighted averages. Whiskers indicate minimum-maximum ranges.
+A. “Above average concentration” and “below average concentration” groups are defined by countries above or below the
+sample average for export concentration in 2016. Concentration index measures the degree of product concentration, where
+values closer to 1 indicate a country’s exports are highly concentrated on a few products. The average for the sample is 0.6,
+where 1 is the most concentrated. Exchange rate classification is based on the IMF’s Annual Report on Exchange Arrangements
+and Exchange Restrictions database, in which countries are ranked 0 (no separate legal tender) to 10 (free float). “Pegged” refers
+to countries with either a hard or soft peg, which is denoted by a ranking of 1 to 6, while “floating” denotes those with rankings
+of 7 to 10 and includes countries with horizontal bands and other managed arrangements. Sample includes 34 (exchange rate)
+or 34 (concentration) energy-exporting EMDEs.
+B. Aggregate growth rates calculated using GDP weights at 2010 prices and market exchange rates. Increasing/decreasing
+growth are changes of at least 0.1 percentage point from the previous year. Countries with a slower pace of contraction from
+one year to the next are included in the increasing growth category.
+C. Nominal effective exchange rate and foreign reserve levels indexed to 100 in January 2014. Change in official reserve assets
+from 2014 to 2016. Last observation is December 2016.
+D. Sample includes 28 oil-exporting EMDEs (excludes Albania, Brunei Darussalam, Ghana, Libya, Myanmar, South Sudan,
+and Turkmenistan). Change in overall fiscal balance is measured from 2014-16. “Above average” and “below average” oil
+revenue groups are defined by countries above or below the sample average of oil revenues as a share of GDP based on 2014
+data.
+
+
+
+
+                                                               34
+Figure 7. Impact of 2014-16 oil price plunge on the largest energy importers
+A. Consumption of fuels, 2018                                                         B. Contribution of mining investment to U.S.
+                                                                                      GDP growth and U.S. industrial production
+                                                                                      growth
+Percent of total energy                 Oil                        Natural gas            Percentage points              Percentage points
+consumption                             Coal                       Hydroelectric
+                                        Nuclear energy             Renewables                         Mining contribution
+100                                                                                        0.4        Industrial production (RHS)     20
+ 75
+                                                                                           0.2                                                                         10
+ 50
+                                                                                           0.0                                                                         0
+ 25
+                                                                                          -0.2                                                                         -10
+  0
+        Brazil
+
+
+
+
+                          Indonesia
+
+
+                                      economies
+
+                                                  Turkey
+                 Mexico
+
+
+
+
+                                                                    South
+
+
+                                                                             China
+                                                           India
+
+
+                                                                    Africa
+                                      Advanced
+
+
+
+
+                                                                                          -0.4                                                                         -20
+
+
+
+
+                                                                                                 2000
+                                                                                                        2002
+                                                                                                               2004
+                                                                                                                      2006
+                                                                                                                             2008
+                                                                                                                                    2010
+                                                                                                                                           2012
+                                                                                                                                                  2014
+                                                                                                                                                         2016
+
+                                                                                                                                                                2019
+Source: BP Statistical Review; Federal Reserve Bank of St. Louis; U.S. Bureau of Economic Analysis; World
+Bank.
+A. Oil consumption is measured in million tonnes; other fuels in million tonnes of oil equivalent. Renewables are
+based on gross generation from renewable sources including wind, geothermal, solar, biomass, and waste, but not
+accounting for cross-border electricity supply.
+B. Mining investment is real private fixed investment of nonresidential structures for mining exploration, shafts,
+and wells.
+
+
+
+
+                                                                                     35
+Figure 8. Pandemic and mitigation measures in EMDE energy exporters
+A. Number of reported infections in EMDEs                B. Number of COVID-19-related fatalities in
+                                                         EMDEs
+
+
+
+
+C. Stringency of mitigation measures                       D. Share of informal economy in EMDEs
+
+
+
+
+Source: European Centre for Disease Prevention and Control (ECDC); OurWorldInData.org; Oxford COVID-19
+Government Response Tracker; World Bank.
+A.B. Daily data. Last observation May 21, 2020.
+C. The Oxford COVID-19 Government Response Tracker collects publicly available information on 11 indicators
+of government response including school closures, public events cancellations, and public information campaigns,
+as well as fiscal and monetary measures and emergency investment in health care. The index ranges between 0 and
+100 where higher indicates more stringent measures. Aggregate growth rates calculated using GDP weight at 2010
+prices and market exchange rates. To correct for data gaps, data is extended with the most recent observation.
+Sample includes 121 EMDEs, of which 33 are energy exporters.
+D. 2016 data used for share of GDP; 2014 data used for share of employment.
+
+
+
+
+                                                      36
+Figure 9. EMDE energy exporters’ vulnerabilities: 2014-16 and 2019
+A. Resource sector activity in energy-exporting B. Export concentration
+EMDEs
+
+
+
+
+C. Share of energy revenues in government D. Commodity export share of energy exporters
+revenues of energy-exporting EMDEs
+
+
+
+
+E. Government and corporate debt of energy F. Fiscal balance of energy exporters
+exporters
+
+
+
+
+Source: Haver Analytics; International Monetary Fund; United Nations Conference on Trade and Development
+(UNCTAD); World Bank.
+A.C. EAP=East Asia and Pacific, ECA = Europe and Central Asia, LAC = Latin America and the Caribbean, MNA
+= Middle East and North Africa, and SSA = Sub-Saharan Africa.
+A. Regional aggregates are medians. Sample includes 34 energy-exporting EMDEs. Chart shows resource rents in
+percent of GDP.
+B. Orange diamonds denote the median and blue bars represent the interquartile range of individual country groups.
+Sample includes 33 energy-exporting EMDEs (excludes South Sudan), 118 energy-importing EMDEs, and 35
+
+                                                       37
+advanced economies. Concentration index measures the degree of product concentration, where values closer to 1
+indicate a country’s exports are highly concentrated on a few products.
+C. Regional aggregates are medians. Sample includes 24 energy-exporting EMDEs (Algeria, Angola, Azerbaijan,
+Bahrain, Bolivia, Cameroon, Chad, Colombia, Republic of Congo, Ecuador, Equatorial Guinea, Gabon, Iran, Iraq,
+Kazakhstan, Kuwait, Nigeria, Oman, Qatar, Russia, Saudi Arabia, Sudan, Trinidad and Tobago, and the United
+Arab Emirates).
+D. Blue bars show share of commodities in total goods exports. Orange whiskers show the minimum-maximum
+range.
+E.F. Blue bars show unweighted averages. Orange whiskers show the interquartile range.
+
+
+
+
+                                                     38
+Figure 10. Reforms since 2014
+A. Number of reforms in energy exporters                    B. Energy subsidies
+
+
+
+
+C. Fiscal breakeven prices for selected energy D. External breakeven prices for selected
+exporters, 2020                                energy exporters, 2020
+
+
+
+
+Source: International Energy Agency; International Monetary Fund; World Bank Doing Business.
+A. Sample includes 35 energy-exporting EMDEs.
+B. Sample includes 25 energy-exporting EMDEs and 14 energy-importing EMDEs.
+C.D. Breakeven prices refer to the oil price at which either the fiscal balance or the current account balance is zero
+in 2020. Dashed line indicates the average of daily Brent oil prices from May 1, 2020, to May 29, 2020.
+
+
+
+
+                                                         39
+Appendix 1. Country classification
+EMDE energy exporters1                    EMDE non-energy commodity exporters2                                EMDE commodity importers3
+Albania                                   Argentina                                                           Afghanistan
+Algeria                                   Armenia                                                             Antigua and Barbuda
+Angola                                    Belize                                                              Bahamas, The
+Azerbaijan                                Benin                                                               Bangladesh
+Bahrain                                   Botswana                                                            Barbados
+Bolivia                                   Brazil                                                              Belarus
+Brunei Darussalam                         Burkina Faso                                                        Bhutan
+Cameroon                                  Burundi                                                             Bosnia and Herzegovina
+Chad                                      Central African Republic                                            Bulgaria
+Colombia                                  Chile                                                               Cabo Verde
+Congo, Rep.                               Congo, Dem. Rep.                                                    Cambodia
+Ecuador                                   Costa Rica                                                          China
+Equatorial Guinea                         Côte d'Ivoire                                                       Comoros
+Gabon                                     Ethiopia                                                            Croatia
+Ghana                                     Gambia, The                                                         Djibouti
+Indonesia                                 Guatemala                                                           Dominica
+Iran, Islamic Rep.                        Guinea                                                              Dominican Republic
+Iraq                                      Guinea-Bissau                                                       Egypt, Arab Rep.
+Kazakhstan                                Guyana                                                              El Salvador
+Kuwait                                    Honduras                                                            Eritrea
+Libya                                     Kenya                                                               Eswatini
+Malaysia                                  Kosovo                                                              Fiji
+Myanmar                                   Kyrgyz Republic                                                     Georgia
+Nigeria                                   Lao PDR                                                             Grenada
+Oman                                      Liberia                                                             Haiti
+Qatar                                     Madagascar                                                          Hungary
+Russia                                    Malawi                                                              India
+Saudi Arabia                              Mali                                                                Jamaica
+South Sudan                               Mauritania                                                          Jordan
+Sudan                                     Mongolia                                                            Kiribati
+Timor-Leste                               Morocco                                                             Lebanon
+Trinidad and Tobago                       Mozambique                                                          Lesotho
+Turkmenistan                              Namibia                                                             Maldives
+United Arab Emirates                      Nicaragua                                                           Marshall Islands
+Venezuela, RB                             Niger                                                               Mauritius
+Yemen, Rep.                               Papua New Guinea                                                    Mexico
+                                          Paraguay                                                            Micronesia, Fed. Sts.
+                                          Peru                                                                Moldova
+                                          Rwanda                                                              Montenegro
+                                          São Tomé and Príncipe                                               Nauru
+                                          Senegal                                                             Nepal
+                                          Sierra Leone                                                        North Macedonia
+                                          South Africa                                                        Pakistan
+                                          Suriname                                                            Palau
+                                          Tajikistan                                                          Panama
+                                          Tanzania                                                            Philippines
+                                          Togo                                                                Poland
+                                          Uganda                                                              Romania
+                                          Ukraine                                                             Samoa
+                                          Uruguay                                                             Serbia
+                                          Uzbekistan                                                          Seychelles
+                                          West Bank and Gaza                                                  Solomon Islands
+                                          Zambia                                                              Somalia
+                                          Zimbabwe                                                            Sri Lanka
+                                                                                                              St. Kitts and Nevis
+                                                                                                              St. Lucia
+                                                                                                              St. Vincent and the Grenadines
+                                                                                                              Syrian Arab Republic
+                                                                                                              Thailand
+                                                                                                              Tonga
+                                                                                                              Tunisia
+                                                                                                              Turkey
+                                                                                                              Tuvalu
+                                                                                                              Vanuatu
+                                                                                                              Vietnam
+
+
+1 A country is classified as energy exporter when, on average in 2012–14, exports of crude oil and natural gas accounted for 20 percent or more of total exports.
+Countries for which this threshold is met as a result of re-exports are excluded. Countries that are primarily exporters of natural gas are included in this category,
+as the price of natural gas is tightly connected to crude oil. When data are not available, judgment is used.
+2 A country is classified as non-energy commodity exporter when, on average in 2012–14, either (i) total commodities exports accounted for 30 percent or more
+
+
+                                                                             40
+of total exports; or (ii) exports of any single commodity other than oil and gas accounted for 20 percent or more of total exports. Countries for which these
+thresholds are met as a result of re-exports are excluded. When data are not available, judgment is used. This taxonomy results in the classification of some well-
+diversified economies as importers, even if they are exporters of certain commodities.
+3 Commodity importers are EMDE economies that are not classified as commodity exporters.
+
+
+
+
+                                                                           41
+References
+Aastveit, K. A., H. C. Bjørnland, and L. A. Thorsrud. 2014. “What Drives Oil Prices? Emerging
+versus Developed Economies.” Journal of Applied Econometrics 30 (7): 1013-1028.
+
+Arezki, R., and O. Blanchard. 2015. “The 2014 Oil Price Slump: Seven Key Questions.”
+VoxEU.org, January 13. Available at http://voxeu.org/article/2014-oil-priceslump-seven-key-
+questions.
+
+Arze del Granado, F. J., D. Coady, and R. Gillingham. 2012. “The Unequal Benefits of Fuel
+Subsidies: A Review of Evidence for Developing Countries.” World Development 40 (11): 2234-
+2248.
+
+Asamoah, A., E. Hanedar, and B. Shang. 2017. “Energy Subsidy Reform: Difficult yet
+Progressing.” VoxEU.org, June 12. Available at http://voxeu.org/article/energysubsidy-reform-
+difficult-yet-progressing.
+
+Aslam, A., S. Beidas-Strom, R. Bems, O. Celasun, S. Kilic Celik, and Z. Koczan. 2016. “Trading
+on Their Terms? Commodity Exporters in the Aftermath of the Commodity Boom.” IMF Working
+Paper 16/27, International Monetary Fund, Washington, DC.
+
+Baffes, J., A. Kabundi, and P. Nagle. 2020. “The Role of Income and Substitution in Commodity
+Demand.” Policy Research Working Paper 8495, World Bank, Washington, DC.
+
+Baffes, J., M. A. Kose, F. Ohnsorge, and M. Stocker. 2015. “The Great Plunge in Oil Prices:
+Causes, Consequences, and Policy Responses.” Policy Research Note 1, World Bank, Washington,
+DC.
+
+Baumeister, C., and J. D. Hamilton. 2019. “Structural Interpretation of Vector Autoregressions
+with Incomplete Identification: Revisiting the Role of Oil Supply and Demand Shocks.” American
+Economic Review 109 (5): 1873-1910.
+
+Baumeister, C. and L. Kilian. 2016a. “Lower Oil Prices and the U.S. Economy: Is This Time
+Different?” Brookings Papers on Economic Activity (Fall): 287-336.
+———. 2016b. “Understanding the Decline in the Price of Oil Since June 2014.” Journal of the
+Association of Environmental and Resource Economists 3 (1): 131-158.
+Baumeister, C., and G. Peersman. 2013. “The Role of Time-Varying Price Elasticities in
+Accounting for Volatility Changes in the Crude Oil Market.” Journal of Applied Econometrics 28
+(7): 1087-1109.
+Beylis, G., and B. Cunha. 2017. Energy Pricing Policies for Inclusive Growth in Latin America
+and the Caribbean. Washington, DC: World Bank.
+Bjørnland, H. C., F. M. Nordvik, and M. Rohrer. 2017. “Supply Flexibility in the Shale Patch:
+Evidence from North Dakota.” CAMP Working Paper Series 2/2017, Centre for Applied Macro-
+and Petroleum Economics, BI Norwegian Business School, Oslo.
+
+                                             42
+Cakir Melek, N. 2018. "The Response of U.S. Investment to Oil Price Shocks: Does the Shale
+Boom Matter?" Federal Reserve Bank of Kansas City Economic Review (Fourth Quarter): 39-61.
+Caldara, D., M. Cavallo, and M. Iacoviello. 2019. “Oil Price Elasticities and Oil Price
+Fluctuations.” Journal of Monetary Economics 103 (5): 1-20.
+Callen, T., R. Cherif, F. Hasanov, A. Hegazy, and P. Khandelwal. 2014. “Economic
+Diversification in the GCC: Past, Present, and Future.” IMF Staff Discussion Note 14/12,
+International Monetary Fund, Washington, DC.
+Cashin, P., Mohaddes, K., Raissi, M., & Raissi, M. 2014. “The Differential Effects of Oil Demand
+and Supply Shocks on the Global Economy.” Energy Economics 44: 113-134.
+Clements, B., D. Coady, S. Fabrizio, S. Gupta, T. Alleyne, and C. Sdralevich. 2013. Energy
+Subsidy Reform: Lessons and Implications. Washington, DC: International Monetary Fund.
+Coady, D., I. Parry, N.-P. Le, and B. Shang. 2019. “Global Fossil Fuel Subsidies Remain Large:
+An Update Based on Country-Level Estimates.” IMF Working Paper 19/89, International
+Monetary Fund, Washington, DC.
+Coady, D., I. Parry, L. Sears, and B. Shang. 2017. “How Large Are Global Fossil Fuel Subsidies?”
+World Development 91 (March): 11–27.
+
+Csereklyei, Z., M. del Mar Rubio-Varas, and D. Stern. 2016. "Energy and Economic Growth: The
+Stylized Facts." Energy Journal 37 (2): 223-255.
+
+Danforth, J., P. A. Medas, and V. Salins. 2016. How to Adjust to a Large Fall in Commodity Prices.
+Washington, DC: International Monetary Fund.
+
+De Michelis, A., T. Ferreira, and M. Iacoviello. Forthcoming. "Oil Prices and Consumption across
+Countries and U.S. States." International Journal of Central Banking. Available at
+https://www.ijcb.org/journal/ijcb20q1a1.pdf.
+
+Deichmann, U., and F. Zhang. 2013. Growing Green: The Economic Benefits of Climate Action.
+Washington, DC: World Bank.
+
+Driscoll, J. C., and A. C. Kraay. 1998. “Consistent Covariance Matrix Estimation with Spatially
+Dependent Panel Data.” Review of Economics and Statistics 10 (4): 307–324.
+
+El-Katiri, L., and B. Fattouh. 2020. “A Brief Political Economy of Energy Subsidies in the Middle
+East and North Africa.” International Development Policy 7: 1-26.
+
+ESMAP (Energy Sector Management Assistance Program). 2017. Egypt. Washington, DC: World
+Bank.
+
+Fattouh, B. 2007. “The Drivers of Oil Prices: The Usefulness and Limitations of Non-Structural
+Model, the Demand-Supply Framework and Informal Approaches.” Working Paper 32, Oxford
+Institute for Energy Studies, Oxford, U.K.
+
+                                               43
+Gately, D., M. A. Adelman, and J. M. Griffin. 1986. “Lessons from the 1986 Oil Price Collapse.”
+Brookings Papers of Economic Activity (Summer): 237-284.
+
+Gately, D., and H. G. Huntington. 2002. "The Asymmetric Effects of Changes in Price and Income
+on Energy and Oil Demand." Energy Journal 23 (1): 19-55.
+
+Grigoli, F., A. Herman, and A. Swiston. 2017. “A Crude Shock: Explaining the Impact of the
+2014-16 Oil Price Decline Across Exporters.” IMF Working Paper 17/160, International Monetary
+Fund, Washington, DC.
+
+Groen, J. J., and M. B. Nattinger. 2020. “Putting the Current Oil Price Collapse into Historical
+Perspective.” Liberty Street Blog, May 14. New York Federal Reserve, New York, NY.
+Guénette, J.-D. 2020. “Price Controls: Good Intentions, Bad Outcomes.” Policy Research Working
+Paper 9212, World Bank, Washington, DC.
+
+Hamilton, J. D. 2011. “Nonlinearities and the Macroeconomic Effects of Oil Prices.”
+Macroeconomic Dynamics 15 (S3): 364-378.
+
+Hesse, H. 2008. “Export Diversification and Economic Growth.” Working Paper 21, Commission
+on Growth and Development, World Bank, Washington, DC.
+
+Hoffman. R. 2012. “Estimates of Oil Price Elasticities,” IAEE Energy Forum Newsletter, 1st
+Quarter 2012, International Association for Energy Economics, Cleveland, OH.
+
+Huidrom, R., M. A. Kose, and F. Ohnsorge. 2017. “How Important are Spillovers from Major
+Emerging Markets?” Discussion Paper 12022, Center for Economic and Policy Research,
+Washington, DC.
+
+Husain, A. M., R. Arezki, P. Breuer, V. Haksar, T. Helbling, P. Medas, and M. Sommer. 2015.
+“Global Implications of Lower Oil Prices.” IMF Staff Discussion Note 15, International Monetary
+Fund, Washington, DC.
+
+IEA (International Energy Agency). 2015. “Oil Market Report.” April. International Energy
+Agency, Paris.
+
+———. 2016. “Economic Diversification in Energy-exporting Arab Countries.” Annual Meeting
+of Arab Ministers of Finance.
+
+———. 2020. “Oil Market Report.” June. International Energy Agency, Paris.
+
+IMF (International Monetary Fund). 2017a. Fiscal Monitor: Achieving More with Less.
+Washington, DC: International Monetary Fund.
+———. 2017b. “If Not Now, When? Energy Price Reform in Arab Countries.” Note prepared for
+the Annual Meeting of Arab Ministers of Finance, Rabat, Morocco.
+Inchauste, G., and D. G. Victor. 2017 The Political Economy of Energy Subsidy Reform.
+
+                                              44
+Washington, DC: World Bank.
+Ito, H., and D. Lee. 2005. “Assessing the Impact of the September 11 Terrorist Attacks on U.S.
+Airline Demand.” Journal of Economics and Business 57 (1): 75-95.
+Jimenez-Rodriguez, R., and M. Sanchez. 2005. “Oil Price Shocks and Real GDP Growth:
+Empirical Evidence for Some OECD Countries.” Applied Economics 37 (2): 201-228.
+Jo, S. 2014. “The Effects of Oil Price Uncertainty on Global Real Economic Activity.” Journal of
+Money, Credit and Banking 46 (6): 1113-1135.
+Jordà, Ò. 2005. “Estimation and Inference of Impulse Responses by Local Projections.” American
+Economic Review 95 (1): 161-182.
+Kang, J., and W. Liao. 2016. “Chinese Imports: What’s Behind the Slowdown?” IMF Working
+Paper 16/106, International Monetary Fund, Washington, DC.
+Kang, W., R. Ratti, and J. Vespignani. 2016. "The Impact of Oil price Shocks on the U.S. Stock
+Market: A Note on the Roles of the U.S. and Non-U.S. Oil Production." Working Paper 2016-03,
+University of Tasmania, Tasmanian School of Business and Economics, Australia.
+Kilian, L. 2009. “Not All Oil Price Shocks Are Alike: Disentangling Demand and Supply Shocks
+in the Crude Oil Market.” American Economic Review 99 (3): 1053-69.
+Kilian, L., and D. P. Murphy. 2014. “The Role of Inventories and Speculative Trading in the
+Global Market for Crude Oil.” Journal of Applied Econometrics 29 (3): 454-478.
+Kilic Celik, S., M. A. Kose, and F. Ohnsorge. 2020. “Subdued Potential Growth: Sources and
+Remedies.” In Growth in a Time of Change: Global and Country Perspectives on a New Agenda,
+edited by H.-W. Kim and Z. Qureshi. Washington, DC: The Brookings Institution.
+
+Kingdom of Saudi Arabia. 2016. “National Transformation Program 2020.” Kingdom of Saudi
+Arabia, Riyadh.
+
+Kojima, M. 2016. “Fossil Fuel Subsidy and Pricing Policies: Recent Developing Country
+Experience.” Policy Research Working Paper 7531, World Bank, Washington, DC.
+
+Kose, M. A., and F. Ohnsorge, eds. 2019. A Decade After the Global Recession: Lessons and
+Challenges for Emerging and Developing Economies. Washington, DC: World Bank.
+
+Kose, M. A., N. Sugawara, and M. Terrones. 2020. “Global Recessions.” Policy Research Working
+Paper 9172, World Bank, Washington, DC.
+
+Krane, J., and S. Y. Hung. 2016. “Energy Subsidy Reform in the Persian Gulf: The End of the Big
+Oil Giveaway.” Issue Brief 04/28/16, Baker Institute for Public Policy, Rice University, Houston,
+TX.
+Lederman, D., and W. Maloney. 2007. “Trade Structure and Growth” In Natural Resources:
+Neither Curse nor Destiny, edited by D. Lederman and W. Maloney. Washington, DC: World
+
+                                               45
+Bank.
+Mohaddes, K., and M. Raissi. 2019. “The U.S. Oil Supply Revolution and the Global Economy.”
+Empirical Economics 57(5): 1515-1546.
+Monasterolo, I., and M. Raberto. 2019. “The Impact of Phasing Out Fossil Fuel Subsidies on the
+Low-carbon Transition.” Energy Policy 124 (January): 355-370.
+Mundaca, G. 2017. “Energy Subsidies, Public Investment and Endogenous Growth.” Energy
+Policy 110 (November): 693-709.
+Newell, R., and B. Prest. 2019. “The Unconventional Oil Supply Boom: Aggregate Price Response
+from Microdata.” The Energy Journal 40 (3): 1-30.
+Nigeria Ministry of Budget and National Planning. 2017. “Nigeria Economic Recovery and
+Growth Plan: 2017–20.” Nigeria Ministry of Budget and National Planning, Abuja.
+Peersman, G., and I. Van Robays. 2012. “Cross-country Differences in the Effects of Oil Shocks.”
+Energy Economics 34 (5): 1532-1547.
+Ratti, R., and J. Vespignani. 2016. "Oil Prices and Global Factor Macroeconomic Variables."
+Energy Economics 59 (June): 198-212.
+Sommer, M., G. Auclair, A. Fouejieu, I. Lukonga, S. Quayyum, A. Sadeghi, G. Shbaikat, A. Tiffin,
+J. Trevino, and B. Versailles. 2016. “Learning to Live with Cheaper Oil: Policy Adjustment in
+Energy-exporting Countries of the Middle East and Central Asia.” Middle East and Central Asia
+Departmental Paper 16/03, International Monetary Fund, Washington, DC.
+Stocker, M., J. Baffes, Y. M. Some, D. Vorisek, and C. Wheeler. 2018. “The 2014–16 Oil Price
+Collapse in Retrospect Sources and Implications.” Policy Research Working Paper 8419, World
+Bank, Washington, DC.
+Teravaninthorn, S., and G. Raballand. 2009. Transport Prices and Costs in Africa: A Review of
+the International Corridors. Washington, DC: World Bank.
+World Bank. 2014. “Transitional Policies to Assist the Poor While Phasing Out Inefficient Fossil
+Fuel Subsidies that Encourage Wasteful Consumption.” Contribution by the World Bank to G20
+Finance Ministers and Central Bank Governors. September. World Bank, Washington, DC.
+
+———. 2015a. Global Economic Prospects: Having Fiscal Space and Using It. January.
+Washington, DC: World Bank.
+———. 2015b. Global Economic Prospects: The Global Economy in Transition. June.
+Washington, DC: World Bank.
+———. 2016a. Global Economic Prospects: Divergences and Risks. June. Washington, DC:
+World Bank.
+———. 2016b. “Whither Oil Prices” Quarterly Economic Brief, World Bank, Washington, DC.
+
+                                              46
+———. 2016c. Global Economic Prospects: Spillovers amid Weak Growth. January. Washington,
+DC: World Bank.
+
+———. 2017a. Global Economic Prospects: Weak Investment in Uncertain Times. January.
+Washington, DC: World Bank.
+
+———. 2017b. “Gulf Economic Monitor: Sustaining Fiscal Reforms in the Long-Term.” World
+Bank, Washington, DC.
+
+———. 2018a. Global Economic Prospects. The Turning of the Tide? June. Washington, DC:
+World Bank.
+
+———. 2018b. Commodity Markets Outlook: Oil Exporters: Policies and Challenges. April.
+Washington, DC: World Bank.
+
+———. 2018c. Global Economic Prospects. Broad-Based Upturn, But For How Long? January.
+Washington, DC: World Bank.
+
+———. 2019a. State and Trends of Carbon Pricing 2019. Washington, DC: World Bank.
+
+———. 2019b. Global Economic Prospects. Heightened Tensions, Subdued Investment. June.
+Washington, DC: World Bank.
+
+———. 2020a. Commodity Markets Outlook: Implications of COVID-19 for Commodities. April.
+Washington, DC: World Bank.
+
+———. 2020b. Global Economic Prospects. June. Washington, DC: World Bank.
+
+Worley, H., S. B. Pasquier, and E. Canpolat. 2018. “Designing Communication Campaigns for
+Energy Subsidy Reform.” Good Practice Note 10, Energy Sector Management Assistance
+Program, World Bank, Washington, DC.
+
+
+
+
+                                           47
+
