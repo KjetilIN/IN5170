@@ -30,10 +30,8 @@ void* reader(void* arg){
         // Acquire lock
         pthread_mutex_lock(&lock);
 
-        printf("Line from reader: %s", line);
-
         // CS: Read to buffer 
-        if (buffer[0] == '\0'){  // Correct comparison
+        if (buffer[0] == '\0'){ 
             strcpy(buffer, line);
         }
 
