@@ -83,10 +83,10 @@ Fine grained atomicity:
 - However, non-atomic interactions appear to be atomic. 
 
 
-At-most-once property: 
+**At most once** property: 
 x:= e satisfies this: 
 - e contains no critical reference
-- e contains 
+- e contains at most one critical reference and x is not referenced by other processes 
 
 
 
