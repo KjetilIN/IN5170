@@ -88,7 +88,9 @@ x:= e satisfies if either:
 - e contains no critical reference
 - e contains at most one critical reference and x is not referenced by other processes 
 
-
+**At-Most-Once (AMO) Property for routines:** Two routines A and B satisfy
+the AMO Property if concurrent execution of A and B does not lead to new results
+compared to their sequential execution (i.e., A;B and B;A).
 
 Example:
 
