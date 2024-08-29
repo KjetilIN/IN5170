@@ -84,7 +84,7 @@ Fine grained atomicity:
 
 
 **At most once** property: 
-x:= e satisfies this: 
+x:= e satisfies if either: 
 - e contains no critical reference
 - e contains at most one critical reference and x is not referenced by other processes 
 
