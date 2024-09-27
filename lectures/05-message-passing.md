@@ -133,8 +133,7 @@ chan reply[n](T2); # Results of the operation
 #### Monitor implementation of message passing 
 
 - Classical monitor with procedures
-- Active monitor => 
-- Passive monitor => 
+- Active monitor => one monitor that actively runs a loop listens on channel for requests
 
 Channel with type:
 
@@ -145,5 +144,75 @@ type op_kind = enum(ACQUIRE, release);
 chan request(int clientID, op_kind kind);
 ```
 
+Multi-unit resource: a resource with multiple unites that can be allocated separately. 
 
-TODO: add final notes from lecture 
+For designing the monitor we need to think about the following:
+1. Interface and internal variables
+   1. We have two types of operations: get unit and free unit
+   2. One request channel
+2. Control structure
+   1. Check the operation first
+   2. Then, perform resource management 
+3. Synchronization, scheduling and mutex
+   1. Cannot wait when no unit is fee
+   2. Must save request and return to it later by reinserting it to the queue
+   3. Upon request: synchronous/blocking call
+   4. No internal parallelism to to mutex 
+
+
+#### Synchronous message passing
+
+- Async channels pass messages, but do not sync two processes
+
+synch send c(expr1,...,exprN);
+- Sender waits until the message is received via the sender
+- Uses to synchronize sender and receiver
+
+
+Pros:
+- Give a maximum size of channel, because there are a fixed number of processes 
+
+Cons:
+- Reduce parallelism when 2 processes communicate 
+- Higher risk of deadlock
+
+Example of deadlock:
+
+```text
+chan in1(int), in2(int);
+
+process P1{
+  int v1 = 1;
+  int v2;
+  sync_send in2(v1);
+  receive in1(v2);
+}
+
+process P2{
+  int v1;
+  int v2 = 2;
+  sync_send in1(v2);
+  receive in2(v1);
+}
+```
+
+This program deadlocks: 
+- Both P1 and P2 block on sync_send and then there is a deadlock
+- One process must be modified to receive first 
+- With async channels, this works 
+
+
+For ASYNC message passing, simple solution => spawn a new thread for sending the message:
+```text
+chan v(int);
+
+process Send{
+  // Create a new thread, and send on that, then continue execution
+  spawn { synch_send v(1); }
+}
+
+process Receive{
+  int res; 
+  receive v(res);
+}
+```
