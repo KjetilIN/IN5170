@@ -4,6 +4,7 @@
 
 - Channels need complex typing disciplines 
 - Actors sends messages between objects
+- Actors communicate between other actors 
 - We know how we are talking to 
   - Actors know the other actors it is sending messages it sends 
 - A programming concept implement some models
@@ -42,3 +43,27 @@ A future is a handle for the caller of a process that will contain the result of
   - One process/thread per objects
   - Implicit queue of tasks (Actors does not have an implicit queue)
   - Cooperative concurrency 
+
+
+
+## Erlang example: 
+
+
+```erlang
+runServer(Subs) ->
+  receive
+    {sub, from} -> runServer(Subs + from);
+    {publish, value} -> 
+      for(id in Subs) 
+        id!{value};
+      runServer(Subs);
+    _ -> runServer(Subs);
+
+Server{
+  start() -> spawn(func() -> runServer([]));
+}
+
+Client{
+  start() -> Server!{sub, self}, Server!{publish, 10};
+}
+```
