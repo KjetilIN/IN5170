@@ -29,17 +29,13 @@ func loop1(ch <-chan Msg, state State){
 	for given_msg := range ch{
 		switch(given_msg.op){
 			case ADD:
-				if state.kind == SNGL{
-					given_msg.ret<-given_msg.p1+given_msg.p2;
-				}
+				state.sum += given_msg.p1+given_msg.p2
+				given_msg.ret<-state.sum;
 			case INC:
-				if(state.kind == DUAL){
-					given_msg.ret<-state.sum + given_msg.p1
-				}
+				state.sum += given_msg.p1
+				given_msg.ret<-state.sum
 			case STORE:
-				if state.kind == SNGL{
-					state.sum = given_msg.p1
-				}
+				state.sum = given_msg.p1
 			case DUAL:
 				state.kind = DUAL;
 			case SNGL:
@@ -54,7 +50,7 @@ func loop1(ch <-chan Msg, state State){
 func main(){
 	input:= make(chan Msg)
 
-	go loop1(input, State{})
+	go loop1(input, State{0, 0})
 
 	res := make(chan int)
 
