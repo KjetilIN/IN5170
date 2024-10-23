@@ -57,8 +57,6 @@ func main(){
 	input <- Msg{STORE, 2, 0, res}
 	input <- Msg{INC, 5, 0, res}
 
-	close(input)
-
 	// Should be 7
 	fmt.Println(<-res)
 }
