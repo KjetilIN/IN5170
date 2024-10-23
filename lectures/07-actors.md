@@ -34,6 +34,7 @@ Example of actor:
 A future is a handle for the caller of a process that will contain the result of value once computed. 
 - Future is blocking. (The thread getting the value is blocked)
 - A promise is a future that which is not clear who is computes it
+  - The result always to come back 
 
 
 ## Active Objects 
