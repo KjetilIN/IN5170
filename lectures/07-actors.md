@@ -45,6 +45,8 @@ A future is a handle for the caller of a process that will contain the result of
   - Implicit queue of tasks (Actors does not have an implicit queue)
   - Cooperative concurrency 
 
+Active objects have methods and uses queue instead of doing pattern matching (like normal actors)
+
 
 
 ## Erlang example: 
