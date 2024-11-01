@@ -38,17 +38,46 @@ Binary semaphore: only 0 and 1 possible
 - Can also be used in the other order to signal events
   - Signal that you a process has arrived (barrier)
 
-Split binary semaphore:
-- Set of semaphores whore sum <= 1
+### Split binary semaphore:
+- Set of semaphores whole sum <= 1
   - Meaning only one can access at the time (After P is successful)
 
-Buffer Capacity with Semaphores
+### Buffer Capacity with Semaphores
 - Ring buffer with two int (front and rear)
 - Number of slots, keep track of empty slots => represented as a semaphore 
 - No critical sections when you have one producer and consumer
 - Need sync. with more producers and consumers. 
   - Solution => two mutex for denying access to buffer (fetch and put)
   - Two things that you are protecting. Buffer and Buffer access (to modify the pointers)
+
+
+```text
+T buf[n];
+
+int front := 0, rear := 0; 
+sem empty := n; # Number of empty slots
+sem full := 0; # Number of filled slots
+
+process Producer{
+  while(true){
+    P(empty);
+    buff[rear] := data;
+    rear := (rear + 1); 
+    V(full);
+  }
+}
+
+process Consumer{
+  while(true){
+    P(full);
+    result := buff[front];
+    front := (front + 1);
+    V(empty);
+  }
+}
+```
+
+For multiple consumers and producers, we and two new semaphores that acts like a mutex
 
 ## Example: Dining philosophers 
 

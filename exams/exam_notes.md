@@ -7,6 +7,10 @@
   - V: Signal an event, release
     - Increase the value by one 
 
+Useful way to think about what the initial value of a semaphore means:
+- 0: "Wait for someone else to give permission"
+- N: "Here are N permits to use right away"
+
 ```text
 # Create semaphore 
 sem s; // Init value 0 
@@ -35,3 +39,7 @@ process Reader [i=1 to M]{
     }
 }
 ```
+
+Split semaphores: when the sum of all semaphores is equal to 1
+Useful for: 
+- Turn-taking problems: such as producer consumer, or the order of operation is important (i.e bee and bear)
