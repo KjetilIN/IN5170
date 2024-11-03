@@ -97,3 +97,11 @@ Fairness ensures that all threads get a fair chance to execute, without starvati
 - **Fair Locks**: Use fair locking mechanisms (like `ReentrantLock(true)` in Java) that serve threads in FIFO order.
 - **Priority Inheritance**: Implement priority inheritance to temporarily raise the priority of a low-priority thread holding a resource needed by a higher-priority thread.
 - **Balanced Scheduling**: Use fair scheduling algorithms like round-robin or proportional share to distribute CPU time fairly among threads.
+
+# Monitor invariant:
+1. Look at the shared variables in the monitor (seatsInBarbershop, nr, np, barberSleeping)
+2. Consider what relationships must always hold true between these variables
+3. Consider limits/boundaries on these variables
+4. Think about what states are impossible/illegal
+5. Consider relationships between variables before and after each procedure call
+6. Verify that all procedures maintain these relationships
