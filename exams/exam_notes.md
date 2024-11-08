@@ -105,3 +105,40 @@ Fairness ensures that all threads get a fair chance to execute, without starvati
 4. Think about what states are impossible/illegal
 5. Consider relationships between variables before and after each procedure call
 6. Verify that all procedures maintain these relationships
+
+
+# Async channel message passing: 
+
+```text
+// ENUM
+type op_kind = enum(REQUEST, RELEASE);
+
+// CHANNEL WITH SLOTS
+chan reply[n] (bool reply);
+
+// Receive from channel: 
+// Note that the variables are created locally 
+receive request(clientID, cl_kind, operation)
+
+// Send to channel 
+send reply[clientID](true);
+
+```
+
+Here are also **queue** notation in await language: 
+```text
+// Create a queue
+queue readers; 
+
+// INSERT a value 
+insert(readers, clientID);
+
+// Take a value
+remove(readers, clientID);
+```
+
+Async channels to sync, by checking for reply right after sending: 
+```text
+send request(i, operation, amount);
+receive reply[i](reply);
+```
