@@ -54,7 +54,7 @@ Consider the following skeleton code:
 
 \subsubsection{Part A}
 
-Add missing code for synchronizing access to the buffer. Use \textit{await} statements for the synchronization. 
+Add missing code for synchronizing access to the buffer. Use \textit{await} statements for the synchronization. \\
 
 \textbf{Solution}
 
@@ -100,23 +100,27 @@ We can use the same variable to signal that the buffer can be read. We do this w
 
 Extend your program so that it read two files and prints all the lines that contain pattern.
 Identify the independent activities and use a separate process for each. 
-Show all synchronization code that is required
+Show all synchronization code that is required \\
 
 
 \textbf{Solution}
 
 The solution now means that two readers read into a single shared buffer. If there were more than one buffer, then we could have used our solution from part a.
 But this task requires us to think about how to coordinate between the two reader. We introduce two \textit{done} variables to signal termination for both. 
+The two readers read one file each, and then but the content in the same buffer. But there is an important point to remember here. 
+In the original solution we check if the buffer is empty and then write to the buffer. This will not work here. For example, the two readers can both go past the atomic statement, which would allow then to both write the buffer.
+To make this work, the checking as well as writing to the buffer must be atomic statements. This will ensure only one reader can add to the buffer.
 
 \begin{lstlisting}
     string buffer;   # contains one line of the input
-    bool done := false;
+    bool done1 := false;
+    bool done2 := false; 
     bool bufferEmpty := false; 
 
     process Finder { # find patterns
         string line1;
         while (true) {
-            <await bufferEmpty || done>
+            <await bufferEmpty || (done1 && done2)>
             if (done) break;
             line1 := buffer;
 
@@ -130,7 +134,7 @@ But this task requires us to think about how to coordinate between the two reade
     process Reader1 { # read new lines
         string line2;
         while (true) {
-            if (EOF) {done := true; break;}
+            if (EOF) {done1 := true; break;}
 
             <await bufferEmpty {
                 buffer := line2;
@@ -142,7 +146,7 @@ But this task requires us to think about how to coordinate between the two reade
     process Reader2 { # read new lines
         string line3;
         while (true) {
-            if (EOF) {done := true; break;}
+            if (EOF) {done2 := true; break;}
 
             <await bufferEmpty {
                 buffer := line3;
@@ -151,3 +155,129 @@ But this task requires us to think about how to coordinate between the two reade
         }
     }
 \end{lstlisting}
+
+
+\subsection{Problem 3}
+
+Consider the code of the simple producer-consumer problem below. Change it so that the variable p is local to the producer process
+and c is local to the consumer process, not global. Hence, those variables cannot be used to
+synchronize access to buf.
+
+
+\begin{lstlisting}
+    int buffer, p, c := 0;
+
+    process Producer{
+        int a[N];
+        while(p < N){
+            <await (p = c)>
+            buffer := a[p];
+            p:= p + 1;
+        }
+    }
+
+    process Consumer{
+        int b[N];
+        while(c < N){
+            <await (p>c) >
+            b[c] := buffer;
+            c:= c+1;
+        }
+    }
+    
+\end{lstlisting}
+
+\textbf{Solution}
+
+The task makes variable p and c local. This means that we cannot use them for synchronization. 
+After making them local, we see the \textit{await} statements does not work anymore. 
+To synchronize the access to the buffer we can use a boolean variable to control who should go next. 
+The behavior from before was that the producer produces, but then waits for the consumer. It is alternating.
+This means that our solution will also work here. 
+
+
+\begin{lstlisting}
+    int buffer; 
+
+    # Variable to keep track of where the producer is 
+    bool bufferEmpty := false; 
+
+    process Producer{
+        int p := 0;
+        int a[N];
+        while(p < N){
+            <await (bufferEmpty = false)>
+            buffer := a[p];
+            p:= p + 1;
+            bufferEmpty := true; 
+        
+        }
+    }
+
+    process Consumer{
+        int c := 0; 
+        int b[N];
+        while(c < N){
+            <await (bufferEmpty = true)>
+            b[c] := buffer;
+            c:= c+1;
+            bufferEmpty := false; 
+        }
+    }
+    
+\end{lstlisting}
+
+
+\subsection{Problem 4}
+
+Consider the following program:
+
+\begin{lstlisting}
+int x:= 0, y:= 0;
+
+co 
+    x:= x + 1  # S1
+    x:= x + 2; # S2
+||
+    x:= x + 2; # P1
+    y:= y - x; # P2
+oc 
+\end{lstlisting}
+
+
+\subsubsection{Part A}
+
+Suppose each assignment statement is implemented by a single machine instruction and
+hence is atomic. How many possible executions are there? What are the possible final
+values of x and y? \\
+
+\textbf{Solution}
+
+Since all statements are atomic we know there is a limited amount of execution.
+But, \textit{S1} must execute before \textit{S2}, and \textit{P1} must execute before \textit{P2}.
+The possible orders of executions then becomes: 
+
+\begin{enumerate}
+    \item S1, S2, P1, P2 $\to$ x:= 5, y:=-5  
+    \item S1, P1, S2, P2 $\to$ x:= 5, y:=-5
+    \item S1, P1, P2, S2 $\to$ x:= 5, y:=-3
+    \item P1, S1, P2, S2 $\to$ x:= 5, y:=-3
+    \item P1, S1, S2, P2 $\to$ x:= 5, y:=-5
+    \item P1, P2, S1, S2 $\to$ x:= 5, y:=-2
+\end{enumerate}
+
+There is a total of 6 executions, and the end result is: \\
+$(x:=5 \land  (y:=-5 \lor y:=-3 \lor y:=-2))$ 
+
+
+\subsubsection{Part B}
+
+Suppose each assignment statement is implemented by three atomic actions that load a
+register, add or subtract a value from that register, then store the result. How many
+possible executions are there now? What are the possible final values of x and y? \\
+
+
+\textbf{Solution}
+
+We know know there is three atomic actions for the...
+
