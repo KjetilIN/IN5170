@@ -1,0 +1,64 @@
+\section{Exercise \#2}
+
+The topic of this exercise is synchronization of critical sections 
+
+\subsection{Problem 1: Weak scheduling}
+
+Consider the following program:
+
+\begin{lstlisting}
+    co
+        <await (x >= 3) x:= x - 3> # P1
+    ||
+        <await (x >= 2) x:= x - 2> # P2
+    ||
+        <await (x = 1) x:= x + 5>  # P3
+    oc
+\end{lstlisting}
+
+
+For which initial values of x does the program terminate (under weakly fair scheduling)?
+What are the corresponding final values? Explain your answer. \\
+
+\textbf{Solution}
+
+\textit{Weak fairness ensures that if a process is enabled and remains enabled, it must eventually execute.} \\
+
+We see that $x=1$ will terminate because we do P3, then P1 or P2. It will also terminate when $x=6$.
+Both cases enables statements or makes the state stay enabled when first enabled. Any other values would not enable
+P3. When $x=3 \lor x=4$ it may terminate based on the order of execution. 
+
+To summarize
+
+\begin{enumerate}
+    \item $x <= 0$: Lower than 0, then all is blocking. No termination 
+    \item $x = 1$: will start P3, and P2, P1 can execute at any order. Terminates 
+    \item $x = 2$: will enter P2, and then x = 0. Then the other two will not terminate. No termination
+    \item $x = 3$: May terminate. If enter P1 then it will not terminate (x will then be set be 0). If enter P2 it will terminate.
+    \item $x = 4$; May terminate. 
+    \item $x = 5$: No termination. X will be 0 after P1 and P2, and therefor will not execute P3
+    \item $x = 6$: Always terminates. P1 and P2 will happen at any order and P3 will determinate. 
+    \item $x >= 7$: Never terminate because x will always be greater than 1, so P3 will not happen. 
+\end{enumerate}
+
+
+\subsection{Problem 2: Weak scheduling}
+
+Consider the following program:
+
+\begin{lstlisting}
+    co
+        <await (x > 0) x:= x - 1> # P1
+    ||
+        <await (x < 0) x:= x + 2> # P2
+    ||
+        <await (x = 0) x:= x - 1>  # P
+    oc
+\end{lstlisting}
+
+
+For which initial values of x does the program terminate (under weakly fair scheduling)?
+What are the corresponding final values? Explain your answer. \\
+
+\textbf{Solution}
+
