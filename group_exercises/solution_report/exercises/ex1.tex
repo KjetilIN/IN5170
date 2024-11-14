@@ -2,7 +2,7 @@
 
 The topic of the exercise is thinking concurrently and learning basic synchronization. 
 
-\subsection{Problem 1}
+\subsection{Problem 1: Parallelism and concurrency}
 
 The notions of parallelism and concurrency, while
 related, are not identical. Parallelism implies that executions “really” run at the same physical
@@ -20,7 +20,7 @@ If a process would not run concurrently, it would execute instructions as seen.
 This would in many cases be very slow.
 
 
-\subsection{Problem 2}
+\subsection{Problem 2: Synchronization}
 
 Consider the following skeleton code:
 
@@ -157,7 +157,7 @@ To make this work, the checking as well as writing to the buffer must be atomic 
 \end{lstlisting}
 
 
-\subsection{Problem 3}
+\subsection{Problem 3: Producer-Consumer}
 
 Consider the code of the simple producer-consumer problem below. Change it so that the variable p is local to the producer process
 and c is local to the consumer process, not global. Hence, those variables cannot be used to
@@ -228,7 +228,7 @@ This means that our solution will also work here.
 \end{lstlisting}
 
 
-\subsection{Problem 4}
+\subsection{Problem 4: Execution and atomicity}
 
 Consider the following program:
 
@@ -310,7 +310,7 @@ For such a task: \textit{hard to find all solutions, and know when you have all 
 
 
 
-\subsection{Problem 5}
+\subsection{Problem 5: Interleaving, non-determinism, and atomicity}
 
 Consider the following program:
 
@@ -361,3 +361,97 @@ Since now we have to consider reading and writing operations, we get the followi
 If both processes read before writing, then we get the same result, no matter what process reads first and what process writes first.
 (Both read, then write). In the case of writing and then another process read, then we get different results. This leads to the following end result: \\
 $(x := 5 \land (y:= 15 \lor y:= 6)) \lor (x:= 8 \land y:= 6)$
+
+
+\subsection{Problem 6: AMO - At most once}
+
+Consider the following program: 
+
+\begin{lstlisting}
+    int x:= 1, y:= 1;
+
+    co 
+        <x:= x + y> # S1
+    ||
+        y:= 0;      # S2
+    ||
+        x:= x - y   # S3
+    oc
+\end{lstlisting}
+
+
+\subsubsection{Part A}
+
+Do S1, S2 and S3 satisfy the requirements of the At-Most-Once Property? \\
+
+\textbf{Solution} 
+
+At most once property is used to check interleaving between the processes. 
+\textit{Statements that fulfills the AMO-property can be considered atomic.} 
+
+
+First \textit{S1}, it is atomic, and we therefor does not need to check the AMO property. 
+For \textit{S2}, we see that it assigns a non-critical reference. This means that it satisfy the AMO property.
+For \textit{S3}, it uses both x and y, which are both critical referees.
+S1, S2 meets the AMO property, but S3 does not. 
+
+\subsubsection{Part B}
+
+What are the final values for x and y? Explain your answer. \\
+
+\textbf{Solution} 
+
+First, we see that are 3 processes which has either 1 or 2 atomic operations. 
+Since S2 meets the AMO property, we can assume that it is atomic!
+
+This will lead to the following executions:
+
+\begin{enumerate}
+    \item S1, S2, R3, W3 $to$ x:= 2, y:= 0
+    \item S1, R3, S2, W3 $to$ x:= 2, y:= 1
+    \item S1, R3, W3, S2 $to$ x:= 2, y:= 0
+    \item S2, S1, R3, W3 $to$ x:= 1, y:= 0
+    \item S2, R3, S1, W3 $to$ x:= 1, y:= 0
+    \item S2, R3, W3, S1 $to$ x:= 1, y:= 0
+    \item R3, W3, S1, S2 $to$ x:= 1, y:= 0
+    \item R3, W3, S2, S1 $to$ x:= 0, y:= 0
+\end{enumerate}
+
+
+The result is then: \\
+$ (y:=0 \land (x:=0 \lor x:=1 \lor x:=2)) \lor (x:=2 \land y:=1)$
+
+
+\subsection{Problem 7: AMO and termination}
+
+Consider the following program:
+
+\begin{lstlisting}
+    int x:=0, y:=10;
+
+    co 
+        while(x != y) x:=x+1;
+    ||
+        while(x != y) y:=y-1;
+    oc
+\end{lstlisting}
+
+\subsubsection{Part A}
+
+Do all parts of the program satisfy the AMO-property? \\
+
+\textbf{Solution}
+
+All assignments meets the AMO property in the program. 
+
+
+
+\subsubsection{Part B}
+
+Will the program terminate? Always? Sometimes? Never? \\
+
+\textbf{Solution}
+
+The program \textit{may} terminate (sometimes). It can happen when both processes see that x equal to y. 
+S1 approaches from the bottom, and S2 approaches from the top. But there is a case where x is increased above current y value.
+This will lead to both process incrementing/decrementing past each other. If this happens the program cannot terminate.  
