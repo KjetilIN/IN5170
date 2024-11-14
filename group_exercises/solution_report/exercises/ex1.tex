@@ -279,5 +279,85 @@ possible executions are there now? What are the possible final values of x and y
 
 \textbf{Solution}
 
-We know know there is three atomic actions for the...
+We know know there is three operations for each statement. We can simplify them as Read and Write. 
+Read must happen before write. We can calculate executions by using this formula:
 
+\begin{align*}
+    E = \frac{(n*m)!}{m!^{n}}
+\end{align*}
+
+Where $n$ is the number of processes and $m$ are the number of atomic steps. In this case we have 2 processes and each process have 6 atomic steps: 
+
+\begin{align*}
+    E &= \frac{(n*m)!}{m!^{n}} \\
+      &= \frac{(2*6)!}{6!^{2}} \\
+      &= 924 \\
+\end{align*}
+
+There are a total of 924 possible executions. 
+
+We know that X is never influenced by another processes other than S2. 
+However, when the assignment is split into multiple instructions, we see that some instructions may be forgotten.
+This may happen when a thread read variables and is then about to write, but before this, another thread has read and then adds. But this new value is not read. 
+This means x could be $x \in {5,4,3,2}$. The y values would then be then be based on those values. But note that y could also -1
+
+The end values are: 
+\begin{align*}
+    (x,y) \in (3,-3), (4,-4), (5, -5), (2, -2), (3, -1), (5, -2), (4, -2), (3, -2)
+\end{align*}
+
+For such a task: \textit{hard to find all solutions, and know when you have all solutions}. 
+
+
+
+\subsection{Problem 5}
+
+Consider the following program:
+
+\begin{lstlisting}
+    int x:= 2, y := 3;
+
+    co
+        <x := x + y> # S1
+    ||
+        <y := x * y> # S2
+    oc
+\end{lstlisting}
+
+
+\subsubsection{Part A}
+
+What are the possible values for X and Y? \\
+
+\textbf{Solution}
+
+Since both operation are atomic then we get the following executions: 
+\begin{enumerate}
+    \item S1, S2 $\to$ x:= 5, y:=15
+    \item S2, S1 $\to$ x:= 8, y:=6
+\end{enumerate}
+
+Meaning the values are: \\
+$(x:=5 \land y:=15) \lor (x:=8 \land y:=6)$
+
+
+\subsubsection{Part B}
+
+Suppose the angle brackets are removed and each assignment statement is now implemented by three atomic actions: 
+read the variables, add or multiply, and write to available. What are the possible final values of x and y now? \\
+
+\textbf{Solution} 
+
+Since now we have to consider reading and writing operations, we get the following possible executions: 
+\begin{enumerate}
+    \item R1, W1, R2, W2 $\to$ x:= 5, y:= 15 
+    \item R1, R2, W1, W2 $\to$ x:= 5, y:= 6 
+    \item R1, R2, W2, W1 $\to$ x:= 5, y:= 6
+    \item R2, R1, W1, W2 $\to$ x:= 5, y:= 6
+    \item R2, R1, W2, W1 $\to$ x:= 5, y:= 6 
+    \item R2, W2, R1, W1 $\to$ x:= 8, y:= 6 
+\end{enumerate}
+
+If both processes read before writing, then we get the same result, no matter what process reads first and what process writes first.
+(Both read, then write). In the case of writing and then another process read, then we get different results. This leads to the following end result: \\
+$(x := 5 \land (y:= 15 \lor y:= 6)) \lor (x:= 8 \land y:= 6)$
