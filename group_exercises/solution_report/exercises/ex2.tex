@@ -52,7 +52,7 @@ Consider the following program:
     ||
         <await (x < 0) x:= x + 2> # P2
     ||
-        <await (x = 0) x:= x - 1>  # P
+        <await (x = 0) x:= x - 1>  # P3
     oc
 \end{lstlisting}
 
@@ -62,3 +62,80 @@ What are the corresponding final values? Explain your answer. \\
 
 \textbf{Solution}
 
+\begin{enumerate}
+    \item $x<-2$ does not terminate because after P2, then there is nothing that enables P1 and P3
+    \item $x=-2$ does not terminate because after P2, P3, then P1 will not be enabled.
+    \item $x=-1$ terminates under P2, P1, P3
+    \item $x=0$ terminates under P3, P2, P1
+    \item $x=1$ terminates under P1, P3, P2
+    \item $x=2$ does not terminate, because after P1, x is 1 and there is no condition that gets enabled
+    \item $x>2$ does not terminate for the same reasons as x equal to 2.
+\end{enumerate}
+
+The final values are: $x\in [-1,1]$
+
+
+
+\subsection{Problem 3: Termination under scheduling strategy}
+
+Consider the following program:
+
+\begin{lstlisting}
+    int x := 10;
+    bool x:= true;
+
+    co 
+        <await (x=0);> c:=false # P1
+    ||
+        while(c) <x:=x-1>       # P2
+    oc
+\end{lstlisting}
+
+
+\subsubsection{Part A: termination under weak fairness}
+
+Does the program terminate under weak scheduling? \\
+
+\textbf{Solution}
+
+Weak scheduling ensures that if a condition is enabled and stays enabled, then it will terminate. 
+In this case we see P2 is enables and starts to decrement x. P1 is only enabled when $x=0$. This may happen, but we see that it get enabled until P2 executes again such that x is less than 0.
+This means that it may terminate, but it is not guaranteed.
+
+\subsubsection{Part B: termination under strong fairness}
+
+Does the program terminate under weak fairness? \\
+
+\textbf{Solution}
+
+Strong fairness ensures termination if it enables infinitely often. This is not the case. After x being decremented below 0, it may never become 0 again. 
+This means that the program may terminate but there is no guarantee. 
+
+
+\subsubsection{Part C}
+
+Program is not extended to:
+
+\begin{lstlisting}
+    int x := 10;
+    bool x:= true;
+
+    co 
+        <await (x=0);> c:=false      # P1
+    ||
+        while(c) <x:=x-1>            # P2
+    ||
+        while(c) {if (x<0) <x:=10>;} # P3
+    oc
+\end{lstlisting}
+
+Does it now terminate under weak or strong fairness? \\ 
+
+
+\textbf{Solution}
+
+Under \textit{weak fairness} it may terminate. Again for the same reasons as before. But again weak fairness only ensures termination when the condition is enabled and stays enabled.
+In this case it will be enabled, but not stay enabled. 
+
+However, under \textit{strong fairness} it will terminate. This is because the new branch will ensure that the condition is infinitely enabled. 
+Thus it terminates. 
