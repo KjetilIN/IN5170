@@ -139,3 +139,99 @@ In this case it will be enabled, but not stay enabled.
 
 However, under \textit{strong fairness} it will terminate. This is because the new branch will ensure that the condition is infinitely enabled. 
 Thus it terminates. 
+
+
+\subsection{Problem 4: Dekker's Algorithm}
+
+The following is Dekker's Algorithm. It is a solution to the critical section problem for two processes. 
+
+\begin{lstlisting}
+    bool enter1:= false, enter2:= false; 
+    int turn := 1;
+
+    process P1{
+        while(true){
+            # Entry protocol
+            enter1:= true;
+            while(enter2){
+                if (turn = 2){
+                    enter1 := false;
+                    while(turn = 2) skip;
+                    enter1 := true;
+                }
+            }
+
+            # CS
+
+            # Exit protocol
+            enter1:= false; 
+            turn := 2; 
+
+            # Non CS
+        }
+    }
+
+
+    process P2{
+        while(true){
+            # Entry protocol
+            enter2 := true;
+            while(enter1){
+                if(turn = 1){
+                    enter2:= false;
+                    while(turn = 1) skip;
+                    enter2 := true;
+                }
+            }
+
+            # CS 
+
+            # Exit protocol 
+            enter2:= false; 
+            turn := 1;
+
+            # Non-CS
+        }
+    }
+\end{lstlisting}
+
+
+Check if the following properties are satisfied: 
+
+\subsubsection{Part A: Mutal Exclusion}
+
+To exclude the other process the entry of the process has to be true and the turn has to be its own number. 
+When this is the case the other process will enter the while loop with the condition of entering. 
+The process will not break out of this loop until the entry is set to false AND the turn is set to the current processes turn. 
+This is only possible after the other process has finished the execution of the statements, that the other process can enter. 
+
+Yes, there is mutual exclusion.
+
+
+
+\subsubsection{Part B: Absence of deadlock}
+
+Deadlocks happens at both processes being stuck on a while loop. 
+
+The first while loop is when both check the condition of the entry. If both sets this condition, then both enter the while loop and the turn will go to the process based on the turn variable. No deadlock here.
+
+The second while loop for skipping when it is the other process turn. 
+This turn variable can never be set to both. One process will be skipping, and then enter the critical section as the other one is exiting. Since they never can be stuck and turn is only modified as the last exit protocol statement, then there is no deadlock. 
+
+Can they be at the two different while loops? No, because then one will be waiting for their turn and the other would wait for their entry, and that is not possible. Before the process will wait for the turn, it will open entry for the other. 
+
+Yes, there is an absence of deadlock. (No deadlock)
+
+\subsubsection{Part C: Absence of unnecessary delay}
+
+Absence of unnecessary delay, means that if one process is in its non-critical section and the other is, then at least one will succeed. 
+
+Lets say that P1 is in the non-critical section. This can only happen if enter1 is false. When this is the case P2 will go straight to the critical section.  
+
+Yes, there is absence of unnecessary delay.
+
+\subsubsection{Part D: Eventual Entry}
+
+Eventual entry means that both will enter the critical section. When both compete for entry, then they will wait on the inner loop. This inner loop is dependent on the turn variable which can either be 1 or 2. Then one will enter and set the turn to the other process. This will give the other process presidents over the last process. 
+
+Every process will enter the critical section eventually.
