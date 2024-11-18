@@ -53,3 +53,6 @@ dkms.conf
 
 
 main
+
+# Ignore rust target folder
+target
