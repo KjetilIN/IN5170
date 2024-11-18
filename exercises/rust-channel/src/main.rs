@@ -29,6 +29,6 @@ fn main() {
 
     // Receive => which is blocking
     // Do this twice 
-    println!("{}", rx.recv().unwrap();
+    println!("{}", rx.recv().unwrap());
     println!("{}", rx.recv().unwrap());
 }
