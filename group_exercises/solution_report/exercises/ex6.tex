@@ -1,0 +1,160 @@
+\section{Exercise \#6}
+
+Topic is types for concurrency
+
+
+\subsection{Problem 1: Extend type system}
+
+Extend the following syntax for statements s such that the syntax also defines
+return statements, which enable to return the value defined by an expression. Given the syntax
+for types T, define a typing rule for the return statements. You can assume that the typing rules
+given from the lecture already exist
+
+\begin{equation}
+    \begin{aligned}
+    & \mathrm{s}::=\mathrm{v}=\mathrm{e} ; \mathrm{s}|\mathrm{~T} \mathrm{v}=\mathrm{e} ; \mathbf{s}| \text { skip } \mid \text { if }(\mathrm{e})\{\mathbf{s}\} \mathrm{s} \\
+    & \mathrm{e}::=n \mid \text { true } \mid \text { false }|\mathrm{e}+\mathrm{e}| \mathrm{e} \wedge \mathrm{e}|\mathrm{e} \leq \mathrm{e}| \mathrm{v} \\
+    & \mathrm{~T}::=\text { Int } \mid \text{Bool} \mid \text{Unit}
+    \end{aligned}
+\end{equation}
+
+\textbf{Solution}
+
+To give this the correct syntax, we extend the statements \textit{s} to be: 
+
+\begin{align*}
+    \mathrm{s}::=\mathrm{v}=\mathrm{e} ; \mathrm{s}|\mathrm{~T} \mathrm{v}=\mathrm{e} ; \mathbf{s}| \text { skip } \mid \text { if }(\mathrm{e})\{\mathbf{s}\} \mathrm{s} \mid \text{return e} \\
+\end{align*}
+
+Because \textit{return} is a statement, and we return an expression. 
+
+
+\subsection{Problem 2: Function Call Type System}
+
+We extend the syntax given in Problem 1 such that we can perform function calls, 
+where a function $f$ maps an argument of type $T_1$ to type $T_2$, i.e., $f: \mathrm{T}_1 \mapsto \mathrm{~T}_2$. 
+An example of a function would be a successor function succ: Int $\mapsto$ Int that increases a given integer by one. 
+Similar to variables, functions are also stored in the typing environment $\Gamma$. 
+An example of $\Gamma$ with a function would be $\Gamma=\{$ succ $\mapsto$ Int $\mapsto$ Int $\}$ 
+We update the syntax as follows:
+
+\[
+\mathrm{e}::=n \mid \text { true } \mid \text { false }|\mathrm{e}+\mathrm{e}| \mathrm{e} \wedge \mathrm{e}|\mathrm{e} \leq \mathrm{e}| \mathrm{v} \mid \mathrm{f}(\mathrm{e})
+\]
+
+The type system of Example 1 is extended by the following typing rule:
+
+\[
+\frac{\Gamma(\mathrm{f})=\mathrm{T}_1 \mapsto \mathrm{~T}_2 \quad \Gamma \vdash \mathrm{e}: \mathrm{T}_1^{\prime} \quad \mathrm{T}_1^{\prime}<: \mathrm{T}_1}{\Gamma \vdash \mathrm{f}(\mathrm{e}): \text { Unit }} \text { function-call }
+\]
+
+Does this extension of the type still ensure type soundness considering also the typing rules in the lecture? 
+If not, can you give an example that shows the violation of type soundness. \\
+
+
+\textbf{Solution}
+
+This violates types soundness because a function-call is an expression and therefor not a statement. In the original typing rule it is typed as an statement.
+To change this, we use $T_2$ as the type of the function call, where $T_2$ is the return type. 
+We can also validate this with 
+
+
+\subsection{Problem 3: Annotate Go Program for different type systems}
+
+Consider the following Go code: 
+
+\begin{lstlisting}[language=go]
+    func add(inp chan int, fin chan bool, res chan int){
+        sum := 0
+        for{
+            select{
+                case num:= <-inp:{
+                    sum = sum + num; 
+                }
+
+                case <-fin:{
+                    res <- sum
+                }
+            }
+        }
+    }
+
+    func provide(inp chan int, fin chan bool){
+        inp <- 9
+        inp <- 3
+        fin <- true
+    }
+
+
+    func main(){
+        input := make(chan int)
+        finish := make(chan bool)
+        res := make(chan int)
+
+        go add(input, finish, res)
+        go provide(input, finish)
+        <- res
+    }
+\end{lstlisting}
+
+
+Annotate the channel types such that they support the following: 
+
+\subsubsection{Modes}
+
+Modes describe what channels are allowed to do. A channel can either send, receive or both. 
+The send operations is denoted with \textit{!} and receive operations are denoted with \textit{?}.
+For the program we can annotate it the following way: 
+
+\begin{lstlisting}[language=go]
+    func add(inp chan? int, fin chan? bool, res chan! int){...}
+
+    func provide(inp chan! int, fin chan! bool){...}
+
+    func main(){
+        input := make(chan?! int)
+        finish := make(chan?! bool)
+        res := make(chan?! int)
+        ....
+    }
+\end{lstlisting}
+
+\subsubsection{Linear Types}
+
+Linear usage types keep track of how many times channel can do operations. 
+With linear types we specify how many times an operation is allowed of each mode. 
+\textit{w} denotes more than two times and are noted as arbitrary amount of time. 
+We denote this with the following: 
+
+\begin{lstlisting}[language=go]
+    func add(inp chan<?.w> int, fin chan<?.1> bool, res chan<!.1> int){...}
+
+    func provide(inp chan<!.w> int, fin chan<!.1> bool){...}
+
+    func main(){
+        input := make(chan<?.w.!.w> int)
+        finish := make(chan<?.1.!.1> bool)
+        res := make(chan<?.1.!.1> int)
+        ....
+    }
+\end{lstlisting}
+
+\subsubsection{Usage Types}
+Usage types are denoted with how many times and the order of operations (the order of operation is very powerful thing to denote). 
+The orders of operations are noted, and at the end there is 0 to make the channel not usable.
+We use the \textit{+} operator when we create a channel to denote that the different types used in a channel. 
+It shows the types of the channel when it is used by more than one thread. 
+Unlike linear types, we do not use the \textit{w} notation for arbitrary amount of operations. 
+
+\begin{lstlisting}[language=go]
+    func add(inp chan<?.?.0> int, fin chan<?.0> bool, res chan<!.0> int){...}
+
+    func provide(inp chan<!.!.0> int, fin chan<!.0> bool){...}
+
+    func main(){
+        input := make(chan<?.?.0 + !.!.0> int)
+        finish := make(chan<?.0 + !.0> bool)
+        res := make(chan<?.0 + !.0> int)
+        ....
+    }
+\end{lstlisting}
