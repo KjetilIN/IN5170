@@ -1,0 +1,116 @@
+\section{Exercise \#7}
+
+Topic of this exercise is creating a simple typing system. The whole exercise has all problems connected as one. 
+The following is already defined: 
+
+In this exercise we are going to design a simple uniqueness type system that ensures that for every pair of integers there is only one variable that can be used to read its value. A pair of integers can be created with $v=\operatorname{Pair}(x, y)$, its first value can be updated with $v . f s t=a$ and its second value with $v . s n d=b$ for integers $x, y, a, b$. Let $V$ be the set of all variables. Our language has statements and expressions defined by the following grammar, with $f \in\{f s t, s n d\}, v \in V, n \in N$.
+
+\[
+\begin{aligned}
+& s::=T v=\operatorname{Pair}(e, e) ; s|T v=e ; s| v=e ; s \mid v \cdot f=e ; s \\
+& \mid \text { if(e)\{s\} else }\{s\} s \mid \text { go\{s\} s|skip } \\
+& e::=n|v| v \cdot f \mid e \geq 0
+\end{aligned}
+\]
+
+
+\subsection{Problem 1: Type syntax}
+
+
+Give a type syntax for our system. We need integers, booleans, and the unit type.
+Additionally, we need a type for pairs that encodes whether the variable with this type can be
+used for access or not. \\
+
+\textbf{Solution}
+
+We can define the types with the following syntax:
+
+\[
+ T ::= \text{Int} \mid \text{Bool} \mid \text{Unit} \mid \text{Pair}_n, n \in [0,1] 
+\]
+
+We define all the types given from the text. To make the pair accessible or not, we use $n$ which is either 0 or 1. 
+0 would mean that it is not used for access, and 1 for being used for access. 
+
+\subsection{Problem 2: Defining environments}
+
+Define the signature of the type environment and define a split into two smaller
+environments on it, i.e., an operation such that access to a Pair is only allowed within one of
+the smaller environments.\\
+
+\textbf{Solution}
+
+Splitting the environment would be done like this: 
+\[
+\Gamma = \Gamma_1 + \Gamma_2
+\]
+
+Where the splitting of the environment would lead to only access in one of the environments. We define it like this:
+
+if $\Gamma(x)=$ Pair $_n$ then $\Gamma_1(x)=\operatorname{Pair}_a \wedge \Gamma_2(x)=$ Pair $_b \wedge a+b=n$ else $\Gamma_1(x)=\Gamma_2(x)=\Gamma(x)$
+
+\subsection{Problem 3: Unrestricted environment}
+
+Does the system require a notion of unrestricted environments? If yes, define it, if
+no, argue why. \\
+
+\textbf{Solution}
+
+We typically use unrestricted for environments such as channels to show that all capabilities of the channels in the environment is used!
+However, since there are no request for unrestricted the environment we don't need to do so. 
+We could have made the program use all environments, but most modern day compilers give a warning when this is the case, and not a error (for example C compliers or Rust).
+
+
+\subsection{Problem 4: Type system for expressions}
+
+Give a type system for expressions that ensures that only pairs that we have the
+sole reference to can be accessed. Note: There are no nested Pairs. You can have different rules depending on whether you
+operate on a Pair variable or not.
+
+\textbf{Solution}
+
+The key here is the last rule. It is a rule for when we access the pair that the variable is accessible. 
+
+\begin{equation}
+    \begin{gathered}
+    \overline{\Gamma \vdash n: \text { int }} \\ \\
+    \frac{\Gamma(v)=T}{\Gamma \vdash v: T} \\ \\
+    \frac{\Gamma \vdash e: \text { int }}{\Gamma \vdash e \geq 0: \text { bool }} \\ \\
+    \frac{\Gamma(v)=\text { Pair }_1}{\Gamma \vdash v \cdot f: \text { int }}
+    \end{gathered}
+\end{equation}
+
+\subsection{Problem 5: Type system for statements}
+
+Give a type system for statements that ensures that only pairs that we have the
+sole reference to can be accessed. At which statements do you need to split the environment?
+Where do you need to update the environment?
+Note: There are no nested Pairs. You can have different rules depending on whether you operate on a Pair variable or not. \\
+
+\textbf{Solution}
+
+\[
+\begin{aligned}
+    & \frac{\Gamma\left[v \mapsto \text { Pair }_1\right] \vdash s: \text { Unit } \quad \Gamma \vdash e_1: \text { int } \quad \Gamma \vdash e_2: \text { int }}{\Gamma \vdash \operatorname{Pair}_1 v=\operatorname{Pair}\left(e_1, e_2\right) ; s: \text { Unit }} \\
+    & \frac{\Gamma\left[v \mapsto \text { Pair }_1\right]\left[w \mapsto \text { Pair }_0\right] \vdash s: \text { Unit }^{\Gamma} \quad \Gamma(w)=\text { Pair }_1}{\Gamma \vdash \text { Pair }_1 v=w ; s: \text { Unit }} \\
+    & \frac{\Gamma[v \mapsto T] \vdash s: \text { Unit } \quad \Gamma \vdash e: T \quad T \neq \text { Pair }_n}{\Gamma \vdash T v=e ; s: \text { Unit }} \\
+    & \frac{\Gamma\left[w \mapsto \text { Pair }_0\right]\left[v \mapsto \text { Pair }_1\right] \vdash s: \text { Unit }^{\Gamma} \quad \Gamma(w)=\text { Pair }_1 \quad \Gamma(v)=\text { Pair }_n}{\Gamma \vdash v=w ; s: \text { Unit }} \\
+    & \frac{\Gamma \vdash s: \text { Unit } \quad \Gamma \vdash e: T \quad \Gamma(v)=T \neq \text { Pair }_n}{\Gamma \vdash v=e ; s: \text { Unit }} \\
+    & \frac{\Gamma(v)=\text { Pair }_1 \quad \Gamma \vdash e: \text { int } \quad \Gamma \vdash s: \text { Unit }}{\Gamma \vdash v . f=e ; s: \text { Unit }} \\
+    & \frac{\Gamma \vdash e: \text { bool } \Gamma \vdash s_1 ; s_3: \text { Unit } \quad \Gamma \vdash s_2 ; s_3: \text { Unit }}{\Gamma \vdash \text { if }(e)\left\{s_1\right\} \text { else }\left\{s_2\right\} s_3: \text { Unit }} \\
+    & \frac{\Gamma=\Gamma_1+\Gamma_2 \quad \Gamma_1 \vdash s_1: \text { Unit } \quad \Gamma_2 \vdash s_2: \text { Unit }}{\Gamma \vdash \text { go }\left\{s_1\right\} s_2: \text { Unit }} \\
+    & \overline{\Gamma \vdash \text { skip : Unit }}
+\end{aligned}
+\]
+
+
+The split is only at the go statement starting a new thread. 
+There is no split at $if$, as we allow it to be accessed multiple times. 
+The order is realized at the copy assignment for pairs. 
+The old variable loses its capability to be accessed, and it is transferred to the new one. 
+Similarly, the if statement does not type its branches in isolation, but with the continuation.
+
+\subsection{Problem 6: Type check the following program}
+
+
+\textit{Not Done}
