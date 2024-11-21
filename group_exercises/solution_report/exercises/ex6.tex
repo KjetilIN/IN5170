@@ -171,3 +171,54 @@ Key takeaways:
     \item An unrestricted typing environment is one where are channels have used up their capabilities. 
     \item There should only be one place in the typing three where there is an error, if it does not type check. 
 \end{enumerate}
+
+
+\subsection{Problem 5: Program typing}
+
+Does the following Go-program with usage types type-check? If not, explain why
+and how the program can be corrected? Annotate the program with the updated usage types.
+
+\begin{lstlisting}[language=go]
+    func main(){
+        b:= make(chan<?.0 + !.0> chan<?.0 + !.0> int)
+        a:= make(chan<?.0 + !.0> int)
+
+        go func(){
+            b <-a
+        }()
+
+        go func(c chan<!.0> int){
+            c<-1
+        }(<-b)
+    }
+\end{lstlisting}
+
+\textbf{Solution}
+
+\begin{lstlisting}[language=go]
+    func main(){
+        b:= make(chan<?.0 + !.0> chan<?.0 + !.0> int)
+        a:= make(chan<?.0 + !.0> int)
+
+        
+        go func(){ // b: chan<!.0> chan<?.0 + !.0> int
+            b <-a // b: chan<0> chan<?.0 + !.0> int
+        }()
+
+        
+        // b : chan<?.0> chan<?.0 + !.0> int
+        go func(c chan<!.0> int){ 
+            // c = a : chan <!.0> int 
+            c<-1 // c = a : chan<0> int
+        }(<-b) // b : chan<0> chan<?.0 + !.0> int
+
+        //Solution
+        <-a // a: chan<0> int 
+    }
+\end{lstlisting}
+
+When we follow the program we see that th channel a which is c, is not typed correctly. 
+After send 1 to the channel, it still has read capabilities that are not used. 
+
+To fix this we can add a read to a at the end of the code. 
+
