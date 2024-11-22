@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}General Questions}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Problem 1: Interference and AMO}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem 2: fairness}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Problem 3: promise and future}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Problem 4: future and linear channels}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Problem 5: channels}{3}{subsection.1.5}%

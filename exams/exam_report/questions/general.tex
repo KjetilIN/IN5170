@@ -1,0 +1,79 @@
+\section{General Questions}
+
+
+\subsection{Problem 1: Interference and AMO}
+
+Consider the following program:
+
+\begin{lstlisting}
+    co 
+        <x:= x + y> // P1
+    ||
+        <y:= y + x> // P2
+    oc
+\end{lstlisting}
+
+\textit{Is the program Interference free?} \\
+
+To check it we can write the v and w variables:
+
+\[
+v_{P1} = \{x, y\}, w_{P1} = \{x\}
+\]
+
+\[
+v_{P2} = \{x, y\}, w_{P2} = \{y\}
+\]
+
+Checking if the read and write interfere:
+
+\[
+    v_{P1} \land w_{P2} = \{y\} \neq \emptyset
+\]
+
+\[
+    v_{P2} \land w_{P1} = \{x\} \neq \emptyset
+\]
+
+We see there are interference in the program, since neither union of read and write variables are empty set. \\
+
+
+\textit{Does the two assignment satisfy AMO-property?} \\
+
+Since two assignments does not satisfy the AMO property since.
+We can verify this by using the AMO rule for assignments. 
+It assigns a critical reference and it is also referenced in the other process. 
+This means that the order of operations would lead to different results. 
+It does not fulfills the AMO property. 
+
+\subsection{Problem 2: fairness}
+
+Explain the difference between weak and strong fairness. \\
+
+\textbf{Solution} \\
+
+Fairness ensures that enabled statements should not be systematically be neglected by the scheduling strategy.
+We use conditions that are enabled or disabled. Both has to be \textit{unconditional fair}. 
+A scheduling strategy is unconditional fair if each enabled unconditional atomic action will eventually be chosen. 
+
+\textit{Weak fairness} is when a condition gets enabled and stays enabled, then it will execute. 
+Under \textit{strong fairness} if a condition is infinitely enabled, then it will execute. 
+
+\subsection{Problem 3: promise and future}
+
+Explain the difference between promises and futures. \\
+
+\textbf{Solution} \\
+
+Futures can be be though of as a mailbox that transmits return values. 
+We need a way to identify the callback messages, and also a way to wait for the result.  
+It is a handle for the caller of a process. It will contain the result value once computed. 
+A future can be read multiple times, and can be used to synchronize with the calle. \\
+
+
+Promise is a future that has is not clear who is computing it. A promise is only completed once. 
+
+
+
+\subsection{Problem 4: future and linear channels}
+\subsection{Problem 5: channels}
