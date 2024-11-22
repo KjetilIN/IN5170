@@ -65,15 +65,38 @@ Explain the difference between promises and futures. \\
 
 \textbf{Solution} \\
 
-Futures can be be though of as a mailbox that transmits return values. 
-We need a way to identify the callback messages, and also a way to wait for the result.  
-It is a handle for the caller of a process. It will contain the result value once computed. 
-A future can be read multiple times, and can be used to synchronize with the calle. \\
+A \textbf{future} is an abstraction used to represent the result of an asynchronous computation. 
+It acts as a read-only handle for the caller, allowing it to access the result of the computation once it is available, 
+and synchronize with the callee by waiting for the result or registering callbacks for when the result is ready.
 
+In simpler terms, a future can be thought of as a mailbox that holds the return value of a task. 
+Once the task is completed, the future contains the result. Futures can typically be read multiple times.
+Also allow the caller to wait (block) or register a callback to handle the result asynchronously. \\
 
-Promise is a future that has is not clear who is computing it. A promise is only completed once. 
+A \textbf{promise}, on the other hand, is a writable counterpart to a future. 
+\begin{enumerate}
+    \item It is used to manually set or \"fulfill\" the value of a future.
+    \item Promises allow the producer (whoever completes the task) to signal that the computation is complete and provide the result.
+\end{enumerate}
 
+Key Differences:
+\begin{enumerate}
+    \item A future is the read-only handle used by the caller to access the result.
+    \item A promise is the write-access handle used by the producer (or callee) to fulfill the result.
+\end{enumerate}
 
+Properties:
+\begin{enumerate}
+    \item Futures can be read multiple times but cannot be written to directly.
+    \item Promises are write-once: they must be completed exactly once, either with a value or an error, and are often used to produce a future. 
+\end{enumerate}
+
+For example:
+\begin{itemize}
+    \item The caller creates a promise and obtains a future associated with it.
+    \item The callee completes the promise, thereby fulfilling the future.
+\end{itemize}
+This separation ensures that the caller and callee can operate independently, decoupling the production and consumption of the computation result.
 
 \subsection{Problem 4: future and linear channels}
 \subsection{Problem 5: channels}
