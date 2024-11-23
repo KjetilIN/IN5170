@@ -99,4 +99,85 @@ For example:
 This separation ensures that the caller and callee can operate independently, decoupling the production and consumption of the computation result.
 
 \subsection{Problem 4: future and linear channels}
+
+Explain the difference between a future and a linear channel used for callbacks. \\
+
+\textbf{Solution}
+
+A future can be read multiple times, but a channel can only be read once. 
+This is the main difference between the two.
+
+
 \subsection{Problem 5: channels}
+
+Consider a channel for integers that is read by one thread and written by
+another.
+
+\begin{enumerate}
+    \item Give a declaration for this channel as a linear type, a usage type and a session type. (1.5p.)
+    \item Each of these systems will split the type environment at the start of a new thread. Give
+    \begin{enumerate}
+        \item a type environment containing only the variables related to the declaration from
+        above and
+        \item the split into the two split environments when a new thread is started
+        for each type system. The started thread will perform the read. (4.5p.)
+    \end{enumerate}
+\end{enumerate}
+
+
+\textbf{Solution}  
+
+For task 1, we can declare each type like this: \\
+
+Linear type is declared by showing how many operations are allowed on each thread:
+\[
+cl = make(chan<!.1,?.1> int)
+\]
+
+Usage type shows the order of allowed operations for each thread:
+\[
+cu = make(chan<!.0 + ?.0> int)
+\]
+
+Session type makes a channel than must held the duality between each receive and send:
+
+\[
+(c, d) = make(chan<!int.0>, chan<?int,0>)
+\]
+
+
+For task 2, we create the two splits like this: 
+\[
+\begin{aligned}
+    \Gamma_1 = \{ & cl \rightarrow chan<!.1,?.1> int, \\
+                & cu \rightarrow chan<!.0 + ?.0> int, \\
+                & (c,s) \rightarrow chan<!int.0 + ?.int.0>\}
+\end{aligned}
+\]
+
+
+The new environments gets split into the following: 
+
+\[
+\Gamma_1 = \Gamma_2 + \Gamma_3
+\]
+
+
+Write environment:
+\[
+\begin{aligned}
+    \Gamma_2 = \{ & cl \rightarrow chan<!.1> int, \\
+                & cu \rightarrow chan<!.0> int, \\
+                & c \rightarrow chan<!int.0>\}
+\end{aligned}
+\]
+
+Read environment: 
+\[
+\begin{aligned}
+    \Gamma_3 = \{ & cl \rightarrow chan<?.1> int, \\
+                & cu \rightarrow chan<?.0> int, \\
+                & d \rightarrow chan<?.int.0>\}
+\end{aligned}
+\]
+
