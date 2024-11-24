@@ -8,4 +8,7 @@
 \contentsline {subsection}{\numberline {2.1}Problem 6: Barbershop}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Problem 7: fairness}{7}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Problem 8: barbershop with priority}{7}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Problem 8: properties of the barbershop problem}{11}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Problem 9: properties of the barbershop problem}{11}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Monitors}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Problem 10: Barbershop monitor with priorities}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Problem 11: Monitor invariant}{13}{subsection.3.2}%

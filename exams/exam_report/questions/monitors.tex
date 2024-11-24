@@ -1,0 +1,94 @@
+\section{Monitors}
+
+We consider monitors with the following operations:
+
+\begin{lstlisting}
+cond cv;
+wait(cv);
+signal(cv);
+signal_all(cv);
+\end{lstlisting}
+
+\subsection{Problem 10: Barbershop monitor with priorities}
+
+Use the monitor operations listed above
+to make a monitor solution to the priority customer barber shop of Exercise 8. Provide your
+solution by completing the code below and explain briefly how your solution gives priority to
+express customers. \\
+
+
+\textbf{Solution}
+
+The solution uses Signal and Continue (SC). We make sure to give priority to express customers by signaling them before regular customers.
+The barber will always prioritize express customers over regular customers. 
+
+\begin{lstlisting}
+monitor Barbershop {
+    int seatsInBarbershop = n;
+    int nr = 0; // number of regular customers
+    int np = 0; // number of priority customers
+
+    // Queue of regular customer
+    cond queuer; 
+
+    // Queueu of express customer
+    cond queuep; 
+
+    // Signal to wake up barber 
+    cond customerReady;
+    
+    procedure barber(){
+        while (true) {
+            // Check if waiting customer 
+            while(nr + np) == 0 { 
+                wait(customerReady)
+            }
+
+            // There is a customer
+            // Signal express customer before regular.
+            if (np > 0) {
+                signal(queuep); 
+            } else {
+                signal(queuer); 
+            }
+        }
+    }
+    procedure regularCustomer() {
+        while (true) {
+            if (nr + np) < seatsInBarbershop {
+                nr := nr + 1;
+                signal(customerReady);
+                wait(queuer);
+                nr := nr - 1;
+            }
+        }
+    }
+    procedure priorityCustomer() {
+        while (true) {
+            if (nr + np) < seatsInBarbershop {
+                np := np + 1;
+                signal(customerReady);
+                wait(queuep);
+                np := np - 1;
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\subsection{Problem 11: Monitor invariant}
+
+What could be a monitor invariant for the Barbershop monitor? 
+Explain briefly why the monitor invariant holds for your monitor solution. \\
+
+\textbf{Solution}
+
+The monitor must hold the following requirements: 
+\begin{enumerate}
+    \item The number of total customers must be less than seats available. 
+    \item There must be 0 or more priority customers. The same must hold for regular customers. 
+\end{enumerate}
+
+It can be expressed as the following invariant: 
+
+\[    (\text{np} + \text{nr} \leq \text{freeSeats}) \land (\text{np} \geq 0) \land (\text{nr} \geq 0) \]
