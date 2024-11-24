@@ -24,14 +24,14 @@ that ensures the following requirements:
 
 Briefly explain why your solution satisfies these requirements. \\
 
-\textit{Solution}
+\textbf{Solution}
 
 The code below is a solution for the given problem. 
 For the sleeping barber we make sure that if this waiting customer is the first one to enter the waiting room, that it wakes up the barber. 
 The barber will be awake as long as there are waiting costumers. It will only go to sleep when the number of waiting customers are 0. In that case, the next costumer will wake up the barber. \\
 
 For the customers, we make sure that there are only the given amount of customers in the waiting room by having a variable for waiting customers. 
-We use a semaphore with intial value 1, such that it acts as a mutex to enter the waitingRoom. If there are no seats available, then the costumer leaves.  
+We use a semaphore with initial value 1, such that it acts as a mutex to enter the waitingRoom. If there are no seats available, then the costumer leaves.  
 
 \begin{lstlisting}
 
@@ -117,4 +117,197 @@ procedure Barber{
 }
 
 \end{lstlisting}
+
+\subsection{Problem 7: fairness}
+
+Is the solution in problem 6 fair? Explain briefly \\
+
+\textbf{Solution}
+
+The solution is not fair for the costumers. Since we use semaphores and not queues, then we can make a customer wait in the waiting room or never being allowed to enter the barbershop.
+Semaphores uses busy wait. This means there are no ordering of the first or last to busy wait. To allow this we must make sure that the order of which the customers enter the barber shop, is the order they are processed. 
+If the semaphores was implemented fairly, then the solution would be first (i.e implemented with FIFO order). 
+
+
+\subsection{Problem 8: barbershop with priority}
+
+The barber shop introduces an “express” category of customers, who should have priority over regular customers. 
+Implement a solution such that priority customers can bypass regular customers, using the same semaphores as in Problem 6. 
+Provide a solution to the Barbershop with priorities by completing the code below. Briefly explain how your solution gives priority to express customer \\
+
+\textbf{Solution}
+
+The solutions keeps track of the amount of waiting priority costumers in the waiting room. 
+When a express customer is waiting, it will always be asked to enter before the regular customers. 
+The barber dictates who is next to get a haircut. 
+
+\begin{lstlisting}
+int seatsInBarbershop := n;
+int freeSeats := seatsInBarbershop;
+
+// Number of waiting costumers
+int nwc := 0;
+
+// Number of waiting priority customers 
+int npc := 0;  
+
+// Enter waiting room mutex 
+sem waitingRoom := 1; 
+
+// Signal when barber allow a costumer enter the chair
+sem regularCustomerEnter := 0; 
+sem expressCustomerEnter := 0; 
+
+// Signal when costumer can leave 
+sem chair := 0; 
+
+// Signaled to wake up barber
+sem barberSleep := 0; 
+
+procedure RegularCostumers{
+    while(true){
+        // Try to enter the shop
+        P(waitingRoom)
+        if (freeChairs > 0){
+            // Take a chair 
+            freeChairs := freeChairs - 1; 
+
+            // Wake up the barber if you are the first waiting costumer
+            if(nwc = 0){
+                V(barberSleep);
+            }
+
+            // Increment waiting costumers; 
+            nwc++;
+        }else{
+            // No place in the waiting room, leave 
+            V(waitingRoom)
+            continue;
+        }
+        V(waitingRoom)
+
+        // Waiting for be called by the barber
+        P(regularCustomerEnter)
+
+        // Allowing a new costumer to enter waiting room
+        P(waitingRoom)
+        freeChairs++;
+        nwc--; 
+        V(waitingRoom)
+
+        // Getting haircut logic 
+
+        // Wait until asked to leave the shop 
+        P(chair)
+    }
+}
+
+procedure ExpressCustomers{
+    while(true){
+        // Try to enter the shop
+        P(waitingRoom)
+        if (freeChairs > 0){
+            // Take a chair 
+            freeChairs := freeChairs - 1; 
+
+            // Wake up the barber if you are the first waiting costumer
+            if(nwc = 0){
+                V(barberSleep);
+            }
+
+            // Increment waiting costumers; 
+            nwc++;
+
+            // Increment amount of waiting priority customers
+            npc++;
+        }else{
+            // No place in the waiting room, leave 
+            V(waitingRoom)
+            continue;
+        }
+        V(waitingRoom)
+
+        // Waiting for be called by the barber
+        P(expressCustomerEnter)
+
+        // Allowing a new costumer to enter waiting room
+        P(waitingRoom)
+        freeChairs++;
+        nwc--; 
+        npc--;
+        V(waitingRoom)
+
+        // Getting haircut logic 
+
+        // Wait until asked to leave the shop 
+        P(chair)
+    }
+
+}
+
+procedure Barber{
+    while(true){
+        P(waitingRoom)
+        if (nwc > 0){
+            // Allow costumer to enter the waiting room    
+            // Check if there are priority costumers 
+            if(npc > 0){
+                V(expressCustomerEnter)
+            }else{
+                V(regularCustomerEnter)
+            }
+            V(waitingRoom);
+        }else{
+            V(waitingRoom);
+
+            // Go to sleep
+            P(barberSleep)
+
+            // Woken up, try again
+            continue;
+        }
+
+        // Doing haircut logic
+
+        // Done! Asking customer to leave
+        V(chair);
+    }
+
+}
+
+\end{lstlisting}
+
+
+\subsection{Problem 8: properties of the barbershop problem}
+
+Does the solution in problem 7: 
+
+\begin{enumerate}
+    \item mutual exclusion?
+    \item absence of deadlock?
+    \item absence of unnecessary delay? 
+    \item fairness? If the solution is not fair, explain how you could make it fair.
+\end{enumerate}
+
+\textbf{Solution}
+
+\textit{Mutual exclusion} is guaranteed in this solution because we use a semaphore as a mutex to make changes to the variables. 
+The mutex ensures that only one process is allowed to change the shared variables: \textit{freeSeats, npc, nwc}. 
+We also make sure that only one is allowed into the barbershop by making the barber allowing only one customer to enter the shop at the time. 
+This is due to the barber giving haircuts is a sequential order. \\
+
+\textit{Absence of deadlock} is also guaranteed. 
+There's no circular wait condition because resources (semaphores) are acquired and released in a consistent order. 
+Barber will always be woken up. When the barber is awake it will take customers in the waiting room. 
+We also make sure to release the semaphore that acts like a mutex always. Because of the mutex being correctly used, we see that customers logic will also always progress.
+The program will always progress. \\
+
+\textit{Absence of unnecessary delay} is also correct, because we only use mutex for code that has race conditions, We also release the lock as soon as possible. 
+The seats are also free as soon as possible, making it available for new costumers to enter the shop. \\
+
+\textit{Fairness} is again not guaranteed. This is because of the same reason of Problem 6. 
+Even though it given more priority to the express customers, it will still do busy wait for allowing what customers to enter. 
+Also, there is the problem of having continues express customers enter the shop. When this is the case, i.e there is always a express customer in the waiting room, then there is no chance for the regular customers to be handled. 
+There is no known ration between regular customers and express customers. If this ratio is low, then the solution will work. We always will give priority to express customers, but there is no policy in how many express customers in a row can be handled before a regular customer must be used. 
+Such a policy could guarantee that regular customers are also processed. For example after every x customer, always handle a regular customer. This policy should be implemented with knowledge of how many express customers there are.  
 
