@@ -1,0 +1,55 @@
+\section{Async Message Passing}
+
+In the following we assume that messages are never lost, but can arrive in a different order than
+they are sent.
+
+\subsection{Problem 12: Actor with Erlang Style Code}
+
+Write two actors using the code skeleton below that implements the
+following behavior. For each state of the actor, use a different loop: 
+
+\begin{quote}
+    You are designing a web application with two components: GUI and Backend. The
+    backend stores a single value that can be set and retrieved through the GUI. The GUI
+    is either WAITING or RESPONSIVE. If it is RESPONSIVE, it accepts messages
+    of the form (GET, user) and (SET, n). In the first case, it changes its state to
+    WAITING, stores the user and sends a message to the backend to retrieve the stored
+    value. In the latter case, it sends a message to the backend to store the value n. If
+    it is WAITING, it only accepts messages of the form (VALUE,n), send the value n
+    to the stored user. The backend accepts (SET, n) messages to update its stored value and answers
+    (GET) messages by sending the stored value to the GUI.
+\end{quote}
+
+\textbf{Solution}
+
+\begin{lstlisting}[language=erlang]
+handleGUIRequest(state, user) -> 
+    receive
+        {from, GET, user} -> {
+
+            handleGUIRequest(WAITING, user)
+
+        },
+        {from, SET, n} -> {
+
+        }
+
+
+handleBackendRequest(value) -> 
+    receive 
+        {}
+
+
+% Create a new GUI Actor
+GUI {
+    start() -> spawn (fun() -> handleGUIRequest())
+}
+
+%  Create a new Backend Actor with initial value of 0 
+Backend{
+    start() -> spawn (fun() -> handleBackendRequest(0))
+}
+
+
+\end{lstlisting}
+

@@ -12,3 +12,5 @@
 \contentsline {section}{\numberline {3}Monitors}{12}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Problem 10: Barbershop monitor with priorities}{12}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Problem 11: Monitor invariant}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Async Message Passing}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Problem 12: Actor with Erlang Style Code}{14}{subsection.4.1}%
