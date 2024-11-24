@@ -1,0 +1,120 @@
+\section{Semaphores}
+
+We consider a barbershop with one barber and a waiting room with n chairs for waiting customers
+(n may be 0). The following rules apply:
+
+\begin{itemize}
+    \item If there are no customers, the barber falls asleep.
+    \item A customer must wake the barber if he is asleep.
+    \item If a customer arrives while the barber is working, the customer leaves if all chairs are
+    occupied and sits in an empty chair if it’s available.
+    \item When the barber finishes a haircut, he inspects the waiting room to see if there are any
+    waiting customers and falls asleep if there are none.
+\end{itemize}
+
+
+\subsection{Problem 6: Barbershop}
+
+Complete the code to provide a solution based on semaphores
+that ensures the following requirements:
+\begin{itemize}
+    \item the barber never sleeps while there are waiting customers and
+    \item there is never more than n customers waiting in the waiting room.
+\end{itemize}
+
+Briefly explain why your solution satisfies these requirements. \\
+
+\textit{Solution}
+
+The code below is a solution for the given problem. 
+For the sleeping barber we make sure that if this waiting customer is the first one to enter the waiting room, that it wakes up the barber. 
+The barber will be awake as long as there are waiting costumers. It will only go to sleep when the number of waiting customers are 0. In that case, the next costumer will wake up the barber. \\
+
+For the customers, we make sure that there are only the given amount of customers in the waiting room by having a variable for waiting customers. 
+We use a semaphore with intial value 1, such that it acts as a mutex to enter the waitingRoom. If there are no seats available, then the costumer leaves.  
+
+\begin{lstlisting}
+
+int freeChairs := n; 
+
+// Number of waiting costumers
+int nwc := 0;
+
+// Enter waiting room mutex 
+sem waitingRoom := 1; 
+
+// Signal when barber allow a costumer enter the chair
+sem barber := 0; 
+
+// Signal when costumer can leave 
+sem chair := 0; 
+
+// Signaled to wake up barber
+sem barberSleep := 0; 
+
+procedure Costumers{
+    while(true){
+        // Try to enter the shop
+        P(waitingRoom)
+        if (freeChairs > 0){
+            // Take a chair 
+            freeChairs := freeChairs - 1; 
+
+            // Wake up the barber if you are the first waiting costumer
+            if(nwc = 0){
+                V(barberSleep);
+            }
+
+            // Increment waiting costumers; 
+            nwc++;
+        }else{
+            // No place in the waiting room, leave 
+            V(waitingRoom)
+            continue;
+        }
+        V(waitingRoom)
+
+        // Waiting for be called by the barber
+        P(barber)
+
+        // Allowing a new costumer to enter waiting room
+        P(waitingRoom)
+        freeChairs++;
+        nwc--; 
+        V(waitingRoom)
+
+        // Getting haircut logic 
+
+        // Wait until asked to leave the shop 
+        P(chair)
+    }
+
+}
+
+procedure Barber{
+    while(true){
+        P(waitingRoom)
+        if (nwc > 0){
+            // Allow costumer to enter the waiting room
+            V(waitingRoom);
+            V(barber);
+        }else{
+            V(waitingRoom);
+
+            // Go to sleep
+            P(barberSleep)
+
+            // Woken up, try again
+            continue;
+        }
+
+        // Doing haircut logic
+
+        // Done! Asking customer to leave
+        V(chair);
+    }
+
+}
+
+\end{lstlisting}
+
