@@ -28,7 +28,6 @@ handleGUIRequest(state, user) ->
         {from, GET, user} -> {
 
             handleGUIRequest(WAITING, user)
-
         },
         {from, SET, n} -> {
 
@@ -49,7 +48,7 @@ GUI {
 Backend{
     start() -> spawn (fun() -> handleBackendRequest(0))
 }
-
-
 \end{lstlisting}
+
+\subsection{Problem 13: Actor message flow}
 

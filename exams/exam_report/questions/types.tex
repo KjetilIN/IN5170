@@ -1,0 +1,89 @@
+\section{Types}
+
+\subsection{Problem 14: Rust type checking}
+
+Consider the following program
+
+\begin{lstlisting}
+    fn f(write_ref: &mut Vec<i32>){
+        write_ref[0] = 0;
+    }
+
+    fn g(read_ref : &Vec<i32>){
+        println!("{}", read_ref[0])
+    }
+\end{lstlisting}
+
+\subsubsection{Part A: Annotate owner}
+
+Does the following program type check? Annotate for each line the current owner of the created vector. 
+
+\begin{lstlisting}
+    fn main(){
+        let mut vec = vec![1,2,3];
+        f(&mut vec);
+        thread::spawn(move || g(&vec));
+    }
+\end{lstlisting}
+
+\textbf{Solution}
+
+The program does typecheck! The mutable reference is used before we move the closure. 
+The owner is always \textit{vec} until the spawn of the new thread. Then we cannot use vec anymore due to the mov keyword. 
+
+\begin{lstlisting}
+    fn main(){
+        let mut vec = vec![1,2,3]; // Owner: vec
+        f(&mut vec); // Owner: vec
+        thread::spawn(move || g(&vec)); // Owner: thread owns the vec now
+    }
+\end{lstlisting}
+
+
+\subsubsection{Part B: Ownership typechecking}
+
+\begin{lstlisting}
+    // #1
+    fn main(){
+        let mut vec = vec![1,2,3];
+        f(&mut vec);
+        thread::spawn(move || g(&vec));
+        g(&vec);
+    }
+
+    // #2
+    fn main(){
+        let mut vec = vec![1,2,3];
+        f(&mut vec);
+        g(&vec);
+        g(&vec);
+    }
+
+    // #3
+    fn main(){
+        let mut vec = vec![1,2,3];
+        f(&mut vec);
+        g(&vec);
+        g(&vec);
+    }
+\end{lstlisting}
+
+\textbf{Solution}
+
+For program \textit{1}, it does not typecheck. Because the ownership of the \textit{vec} to the thread. 
+This means that after that line the vector cannot be used since it is moved out of scope. \\
+
+For program \textit{2} and \textit{3} does typecheck. The core rule of rust borrowing is: 
+\begin{quote}
+    At any give time, you can either have:
+    \begin{enumerate}
+        \item One mutable reference 
+        \item Any number of immutable references. 
+    \end{enumerate}
+\end{quote}
+
+But, since we to a temporary borrow here, the ownership is returned at the end of the function call. It would be different if we created variables and not dropped them before calling new references. 
+Then the borrow would stay active until the end of the program. But instead we return the borrowed memory after using it. 
+
+
+\subsection{Problem 15: Linearity}
