@@ -87,3 +87,183 @@ Then the borrow would stay active until the end of the program. But instead we r
 
 
 \subsection{Problem 15: Linearity}
+
+Consider the following Go-like code. Does it type-check? If no,
+give the line of the statement where type-checking fails, the reason and the line where the
+misused channel is declared. If yes, annotate for each declared channel (declared in the variables
+c,d,e) the line where it is read and where it is written.
+
+\begin{lstlisting}
+    func main(){
+        c = make(chan<!1,?1> int)
+        d = make(chan<!1,?1> chan<!1,?1> int)
+        e = make(chan<!1,?1> int);
+
+        f = 0; 
+        res = 0; 
+        ret = 0; 
+
+        go func{
+            go func{
+                d <-e; e <- 1; skip;
+            }
+
+            res = <-d;
+            ret = 0; 
+            if((<-res) < 0){
+                ret = -1;
+            }else{
+                ret = 0; 
+            }
+            c <- ret*(<-e); skip;
+        }
+
+        f = <-c; skip;
+    }
+\end{lstlisting}
+
+\textbf{Solution}
+
+It fails on line 19. It reads E twice! We read the channel e into d which is read once (on line 12), and then we read e again on line 19. 
+This will make the program not type checked. 
+
+\begin{lstlisting}
+    func main(){
+        c = make(chan<!1,?1> int)
+        d = make(chan<!1,?1> chan<!1,?1> int)
+        e = make(chan<!1,?1> int);
+
+        f = 0; // c -> !1,?1, d -> !1,?1, e -> !1,?1
+        res = 0; // c -> !1,?1, d -> !1,?1, e -> !1,?1
+        ret = 0; // c -> !1,?1, d -> !1,?1, e -> !1,?1
+
+        go func{ // c -> !1,?1, d -> !1,?1, e -> !1,?1
+            go func{ // c -> !1,?1, d -> !1,?1, e -> !1,?1
+                d <-e; e <- 1; skip; // c -> !1,?1, d -> !0,?1, e -> !0,?1            }
+
+            res = <-d; // c -> !1,?1, d -> !0,?0, e -> !0,?1
+            ret = 0; // c -> !1,?1, d -> !0,?0, e -> !0,?1
+            if((<-res) < 0){ // c -> !1,?1, d -> !0,?0, e -> !0,?0
+                // Does not enter
+                ret = -1;
+            }else{ // c -> !1,?1, d -> !0,?0, e -> !0,?0
+                ret = 0; // c -> !1,?1, d -> !0,?0, e -> !0,?0
+            }
+            // Error here! We are reading from channel e, but it has used up all read capabilities!
+            c <- ret*(<-e); skip;
+            
+        }
+
+        f = <-c; skip;
+    }
+\end{lstlisting}
+
+
+\subsection{Problem 16: Binary Session types}
+
+Consider the following Go-like code
+
+\begin{lstlisting}
+    func main(b bool, val1 int, val2 int){
+        (c, c_dual) = make(chan T, chan T_)
+        
+        go f(c_dual);
+
+        if (b){
+            (r, r_dual) = make(chan S, chan S_)
+            c <- l_1; 
+            c <-r; 
+            c <-val1; 
+            r_dual <-val2;
+
+            if (<-r_dual){
+                println("success);
+            }else{
+                println("failure");
+
+            }else{
+                c <- abort; 
+            }
+        }
+    }
+\end{lstlisting}
+
+
+\subsubsection{Part A: sessiontype T and S}
+
+Give the session type for T and S so the program is well typed. \\
+
+\textbf{Solution}
+
+\[
+T = \& \begin{cases}
+    l_1: & !chan<S>.!int.0 \\
+    abort: &  0
+\end{cases}
+\]
+
+\[
+S = ?int.!bool.0
+\]
+
+\subsubsection{Part B: Duals}
+
+Give the duals of T and S . \\
+
+\textbf{Solution}
+
+\[
+\hat{T} = \oplus \begin{cases}
+    l_1: & ?chan<S>.?int.0 \\
+    abort: &  0
+\end{cases}
+\]
+
+\[
+\hat{S} = !int.?bool.0\
+\]
+
+\subsubsection{Part C: subtype}
+
+Give the subtype of T and $\hat{T}$ \\
+
+\textbf{Solution}
+
+We know the following: 
+
+\[
+T = \& \begin{cases}
+    l_1: & !chan<S>.!int.0 \\
+    abort: &  0
+\end{cases}
+\]
+
+
+\[
+\hat{T} = \oplus \begin{cases}
+    l_1: & ?chan<S>.?int.0 \\
+    abort: &  0
+\end{cases}
+\]
+
+The subtypes are expressed as followed: 
+\[T' <: T \]
+\[\hat{T'} <: \hat{T} \]
+
+The subtypes are expressed like this: 
+
+\[
+T' = \& \begin{cases}
+    l_1: & !chan<S>.!int.0 \\
+    abort: &  0 \\
+    l: & 0
+\end{cases}
+\]
+
+
+\[
+\hat{T'} = \oplus \begin{cases}
+    l_1: & ?chan<S>.?int.0 \\
+\end{cases}
+\]
+
