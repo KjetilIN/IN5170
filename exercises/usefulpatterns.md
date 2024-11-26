@@ -38,3 +38,30 @@ Here is a few tips:
 - Consider the invariant and when we should signal the processes 
 
 ![image](./pattern_images/barber_monitor.png)
+
+
+## Producer/Consumer with semaphore
+
+This patterns works well!
+- Two indexes to keep track of where the buffer are: rear and front 
+- Two semaphores
+  - Empty has N permits, which represents how many empty slots there are
+  - Full is initially zero
+
+The producer:
+- We do a P to check if there are any empty slots, and then we take that permit 
+- We do a V operation on `full` when we produced something, signaling that we have produced something 
+- We increment our read pointer by one 
+
+The consumer: 
+- Does a P on full to see if there have been anything produces
+- Does a V after consuming 
+
+![image](./pattern_images/producer_consumer_sempahore.png)
+
+
+This solution does not have any critical section because the pointers are locally to does producer and consumer
+
+What if we want multiple consumers and producers?
+- Simple: two new semaphores that acts as mutexes for the consuming an producing
+  - They are around the CS
