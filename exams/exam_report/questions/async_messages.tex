@@ -26,22 +26,51 @@ following behavior. For each state of the actor, use a different loop:
 handleGUIRequest(state, user) -> 
     receive
         {from, GET, user} -> {
-
-            handleGUIRequest(WAITING, user)
+            if (state = RESPONSIVE){
+                val = Backend!{self, GET}
+                from!{val}
+                handleGUIRequest(WAITING, user)
+            }else{
+                handleBackendRequest(WAITING, user)
+            }
         },
         {from, SET, n} -> {
+            if (state = RESPONSIVE){
+                Backend!{SET, n}
+                handleGUIRequest(WAITING, user)
+            }else{
+                self(VALUE, N)
+            }
 
+        },
+        {VALUE, n} -> {
+            if (state = WAITING){
+                Backend!{SET, n}
+                handleGUIRequest(WAITING, user)
+            }
+        },
+        _ ->{
+            % Handle unexpected messages 
         }
 
 
 handleBackendRequest(value) -> 
     receive 
-        {}
+        {from, GET} -> {
+            from!{value}
+            handleBackendRequest(value)
+        },
+        {SET, n} -> {
+            handleBackendRequest(n)
+        },
+        _ ->{
+            % Handle unexpected messages
+        }
 
 
 % Create a new GUI Actor
 GUI {
-    start() -> spawn (fun() -> handleGUIRequest())
+    start() -> spawn (fun() -> handleGUIRequest(RESPONSIVE))
 }
 
 %  Create a new Backend Actor with initial value of 0 
@@ -51,4 +80,14 @@ Backend{
 \end{lstlisting}
 
 \subsection{Problem 13: Actor message flow}
+
+Assume that the messages sent by the users arrive in the order they
+are sent. Does your solution of problem 12 ensure that a user that sends a (SET,n) message followed by
+a GET message gets n as an answer (if no other user communicated with GUI or backend)?
+Describe an execution to explain an answer. \\
+
+\textbf{Solution}
+
+In this case when no other user communicates with no other user then it will work. 
+
 
